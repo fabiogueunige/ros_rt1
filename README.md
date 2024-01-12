@@ -1,115 +1,47 @@
-# Assignment 2
---------------
+# Research Track Assignment 2
+================================
 
-## Launch files example
-```
-<launch>
-  <node name="turtlesim_node" pkg="turtlesim" type="turtlesim_node">
-  <param name="background_b" type="int" value="0"/>
-  <param name="background_g" type="int" value="0"/>
-  <param name="background_r" type="int" value="255"/>
-  </node>
-  <node name="service" pkg="turtlebot_controller" type="service_node"/>
-  <node name="controller" pkg="turtlebot_controller" type="exercise1" output="screen"/>
-</launch>
-```
-or
-```
-<launch>
-  <node name="turtlesim_node" pkg="turtlesim" type="turtlesim_node"/>
-  <param name="turtlesim_node/background_b" type="int" value="0"/>
-  <param name="turtlesim_node/background_g" type="int" value="0"/>
-  <param name="turtlesim_node/background_r" type="int" value="255"/>
-  <node name="service" pkg="turtlebot_controller" type="service_node"/>
-  <node name="controller" pkg="turtlebot_controller" type="exercise1" output="screen"/>
-</launch>
-```
+## Short Description
+---------------------
+This is the second assignment for the Research Track I course of Robotics Engineering Master Degree in Genoa.
+This project involves simulating the movement of a robot in a 3D wordl environment. Users can input a specific position that the robot will attempt to reach. Additionally, users can cancel the goal while the robot is in the process of reaching it. Throughout this simulation, it is possible to view key information about the robot by subscribing to messages or services.
 
-## Test 
-```
-roslaunch robot_description sim.launch
-```
-Rviz is a tool for ROS Visualization. It's a 3-dimensional visualization tool for ROS. It allows the user to view the
-simulated robot model, log sensor information from the robot's sensors, and replay the logged sensor information.
-By visualizing what the robot is seeing, thinking, and doing, the user can debug a robot application from sensor
-inputs to planned (or unplanned) actions.
-Gazebo is the 3D simulator for ROS
-The robot may be controlled using ROS topics (/cmd_vel) (a nice tool is teleop_twist_keyboard, which may be
-launched with rosrun teleop_twist_keyboard teleop_twist_keyboard.py). When moving the robot around,
-information coming from sensors may be visualized in Rviz (ex: odom, or cameras).
+Here an example:
+![gif funzionamento]()
 
-Let’s check more carefully the launch file.
-* We add the robot description in the ROS parameter server
-* We launch the simulation in an empty world
-* We launch the node RVIZ, together with some additional nodes
-* We spawn our robots in the simulation
+## Installing and running
+-------------------------
+The simulator requires:
+* [Ros installation](https://wiki.ros.org/ROS/Installation) follow all the instructions to build the ros-workspace
 
-## Step 2 and 3
-### Gazebo
-* Dynamic simulation based on various physics engines (ODE, Bullet, Simbody and DART)
-* Sensors (with noise) simulation
-* Plugin to customize robots, sensors and the environment
-* Realistic rendering of the environment and the robots
-* Library of robot models
-* ROS integration
-
-Gazebo is composed by:
-* A server gzerver for simulating the physics, rendering and sensors
-* A client gzclient that provides a graphical interface to visualize and interact with the simulation
-The client and the server communicate using the gazebo communication library
-This may be seen by analyzing the launch file included (empty_world.launch in the gazebo_ros package)
-* Two different nodes are started, one for the GzServer, and one for the GzClient
-* You may also notice all parameters defined in the launch file
-
-### Rviz
-When launching Rviz, three nodes are actually executed:
-- joint_state_publisher
-- robot_state_publisher
-- rviz
-• joint_state_publisher: the package reads the robot_description parameter from the parameter server, finds all of
-the non-fixed joints and publishes a JointState message with all those joints defined. If GUI is present, the
-package displays the joint positions in a window as sliders.
-• robot_state_publisher: the package uses the URDF specified by the parameter robot_description and the joint
-positions from the topic joint_states to calculate the forward kinematics of the robot and publish the results via
-tf.
-✓ Rviz is executed by specifying a configuration file, which sets the elements that we want to display in the
-simulation.
-✓ In the example, we specify the fixed frame (odom) and that we want to visualize the robot structure and the
-output of the camera.
-✓ Topics or visualization elements may be added by selecting them from the add menu.
-✓ By selecting “odom” as fixed frame, we may visualize the movement of the robot also in Rviz. This may be more
-evident, by adding the visualization of the tf.
-✓ The sim2.launch roslaunch file corresponds to the same simulation, but with a slightly different robot: it has a
-laser sensor instead of a camera.
-✓ The launch file is thus similar to the previous one, but we are now loading a different urdf file as
-robot_description parameter in the ROS parameter server, and we are starting Rviz with a different
-configuration file: indeed, we are going to visualize the laser sensor instead of the camera output.
-✓ Please notice that, differently from images, the laser output may be seen directly in the corresponding frame
-✓ Finally sim_w1.launch uses a different environment for the simulation (environments have been stored in the
-folder worlds).
-✓ Here in the launch file we explicitly launch the gazebo client and the server (we cannot include anymore the
-empty_world.launch).
-✓ The world has been defined with a default value, so this may be overridden when launching the simulation (es.
-roslaunch robot_description sim_w1.launch world:=world01).
-
-
-✓ Toactually plan the motion of our robot in an environment we need to process the output of the sensors
-• The node reading_laser.py converts the 720 readings contained inside the LaserScan msg into five distinct
-readings. Each reading is the minimum distance measured on a sector of 60 degrees (total 5 sectors = 180
-degrees).
-• Moving the robot in the environment we may check if the laser data are correctly updated
+The package installation:
+* Download the git repository inside the ros workaspace/src
 ```
-rosrun robot_description reading_laser.py
+path: ~rosworkspace/src
+git clone https://github.com/fabiogueunige/ros_rt1.git
 ```
-✓ Let’s now use the information for controlling the robot in the environment. For example, we can let the robot
-move around but avoiding obstacles!
-✓ obstacle_avoidance.py implements a very simple behaviour: if an obstacle is detected on the front (or front-right
-or front-left) rotate until there are no obstacles perceived. If the obstacle is perceived on the right, than rotate on
-the left, and viceversa.
+* Make all the python file executable
 ```
-rosrun robot_description obstacle_avoidance.py
+path: ~rosworkspace/src/PACKAGE/scripts
+chmod +x *.py
 ```
-The text keep going...[here](https://github.com/fabiogueunige/RosRT1/blob/master/src/assignment_2_2023/pdf/3D_sim_2nd_assignment.pdf)
+* Inside the ros workspace build the package with `catkin_make`
+```
+path: ~rosworkspace
+catkin_make
+```
+* launch the wordl and all the nodes
+```
+roslaunch PACKAGE assignment1.launch
+```
+If you want to launch the nodes separately
+```
+rosrun PACKAGE nodename.py
+```
+Instead, to call the services developed to see the velocity of the robot and the target coordinates:
+* robot info: `rosservice call /dis_speed`
+* target coordinates: `rosservice call /last_target`
+
 
 ## Assignment 2 (to do)
 Problem here! The task is blocking and I cannot do anything while the robot is reaching the target.
