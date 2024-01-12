@@ -79,6 +79,7 @@ find_package(catkin REQUIRED COMPONENTS
    DEPENDENCIES
    actionlib_msgs
    geometry_msgs
+   std_msgs
  )
 
 ################################################
@@ -201,11 +202,11 @@ include_directories(
 # )
 
 ## Mark other files for installation (e.g. launch and bag files, etc.)
- install(
-    DIRECTORY config/
-    DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/config
-    FILES_MATCHING PATTERN "*.yaml"
-  )
+#install(
+  #DIRECTORY config/
+  #DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/config
+  #FILES_MATCHING PATTERN "*.yaml"
+#)
 
 
 #############

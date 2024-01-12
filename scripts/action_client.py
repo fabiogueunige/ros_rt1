@@ -15,7 +15,7 @@ import time
 pubInfo = None
 subOdom = None  
 
-# AGGIUNGI ROUND AI MESSAGGI POS E VEL PER EVITARE DI PUBBLICARE NUMERI TROPPPO LUNGHI
+# AGGIUNGI ROUND AI MESSAGGI (TUTTI DIREI) POS E VEL PER EVITARE DI PUBBLICARE NUMERI TROPPPO LUNGHI
 # AGGIUNGI LA STAMPA DEL FEEDBACK AL GOAL
 # SCEGLI SE DARE LA IMPOSTAZIONE DI DARE UN NUOVO TARGET ANCHE QUANDO UNO E GIA PRESENTE
 
@@ -82,7 +82,7 @@ def action_client():
 
     # User interface
     rospy.loginfo("Hi, welcome to the robot planner simulation")
-    rospy.loginfo("Please choose the goal you want to reach")
+    rospy.loginfo("Please choose the position you want to reach with the robot")
     rospy.loginfo("Insert the coordinates to reach as ")
     
     # Create a goal to send (to the action server)
@@ -100,8 +100,7 @@ def action_client():
     rospy.loginfo("You sent the goal with: X = %f, Y = %f", goal.target_pose.pose.position.x, goal.target_pose.pose.position.y)
 
     while not rospy.is_shutdown(): # can sobstitute with rospy.spin()
-        # Define the goal (will be passed from the user)
-        rospy.loginfo("Please choose the new goal you want to reach or cancel the previouse one")
+        # Input from the user
         choice = input("Do you want to insert a new goal? (y/n)")
         if (choice == 'y'):
             # implements the coordinates acquisition
@@ -136,7 +135,9 @@ def main():
     """
     global pubInfo, subOdom
     
+    # Wait for gazebo to be up and running
     time.sleep(1)
+
     # Initialize the node
     rospy.init_node('action_client')
 

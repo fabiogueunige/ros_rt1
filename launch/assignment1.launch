@@ -10,6 +10,6 @@
     <node pkg="assignment_2_2023" type="last_tar_service.py" name="last_target" />
     <node pkg="assignment_2_2023" type="dis_speed_service.py" name="dis_speed_service" />
     
-    <!--<node pkg="assignment_2_2023" type="start_action_client.sh" name="action_client_terminal" />
-    <node pkg="assignment_2_2023" type="action_client.py" name="action_client" output="screen" />-->
+    <!--<node pkg="assignment_2_2023" type="start_action_client.sh" name="action_client_terminal" />-->
+    <node pkg="assignment_2_2023" type="action_client.py" name="action_client" launch-prefix="xterm -e" />
 </launch>
