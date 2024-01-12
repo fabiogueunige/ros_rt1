@@ -5,7 +5,7 @@ from assignment_2_2023 import srv
 from assignment_2_2023 import msg
 from assignment_2_2023.srv import LastTarget, LastTargetResponse
 from assignment_2_2023.msg import PlanningActionGoal, PlanningGoal
-
+import time
 
 subgoal = None
 servicetarget = None
@@ -28,12 +28,7 @@ def target_service_callback(request):
     global subgoal
     global postarx, postary
 
-    # Create the response
-    #resp = LastTargetResponse()
-    #resp.tar_pose_x = postarx
-    #resp.tar_pose_y = postary
-
-    # Return the response
+    # Return the response for the service
     return LastTargetResponse(postarx, postary)
     
 def target_sub_callback(msg):
@@ -48,6 +43,7 @@ def target_sub_callback(msg):
     global subgoal
     global postarx, postary
 
+    # Savings the values in the global variables
     postarx = msg.goal.target_pose.pose.position.x
     postary = msg.goal.target_pose.pose.position.y
 
@@ -58,6 +54,7 @@ def last_tar_service():
     """
     global subgoal, servicetarget
 
+    time.sleep(2)
     # Initialize the node
     rospy.init_node('last_target')
 
@@ -72,10 +69,10 @@ def last_tar_service():
 
 if __name__ == '__main__':
     try:
-        # Initialize the node
+        # Call the main function
         last_tar_service()
-        # Print the result given by the action server
     except rospy.ROSInterruptException:
+        # Print the error
         print("Errors in last_tar_service.py")
         print("program interrupted before completion for errors", file=sys.stderr)
         pass

@@ -9,15 +9,16 @@ import assignment_2_2023.msg
 from assignment_2_2023.msg import Robotinfo
 from assignment_2_2023.msg import PlanningAction, PlanningGoal, PlanningResult, PlanningActionResult
 from actionlib_msgs.msg import GoalStatus
+import time
 
 # Global variables
 pubInfo = None
 subOdom = None  
 
-#def OdomCallback(msg):
-    # Get the actual pose 
+# AGGIUNGI ROUND AI MESSAGGI POS E VEL PER EVITARE DI PUBBLICARE NUMERI TROPPPO LUNGHI
+# AGGIUNGI LA STAMPA DEL FEEDBACK AL GOAL
+# SCEGLI SE DARE LA IMPOSTAZIONE DI DARE UN NUOVO TARGET ANCHE QUANDO UNO E GIA PRESENTE
 
-    # Put it in the message
 
 def insertNumber():
     """
@@ -63,7 +64,7 @@ def odom_callback(msg):
     msgInfo.pos_x = msg.pose.pose.position.x
     msgInfo.pos_y = msg.pose.pose.position.y
     msgInfo.vel_x = msg.twist.twist.linear.x
-    msgInfo.vel_z = msg.twist.twist.linear.z
+    msgInfo.vel_ang_z = msg.twist.twist.angular.z
 
     # Publish the message
     pubInfo.publish(msgInfo)
@@ -134,6 +135,8 @@ def main():
     Main function
     """
     global pubInfo, subOdom
+    
+    time.sleep(1)
     # Initialize the node
     rospy.init_node('action_client')
 
@@ -148,10 +151,10 @@ def main():
 
 if __name__ == '__main__':
     try:
-        # Initialize the node
+        # Call the main function
         main()
-        # Print the result given by the action server
     except rospy.ROSInterruptException:
+        # Print error message
         print("Errors in action_client.py")
         print("program interrupted before completion for errors", file=sys.stderr)
         pass

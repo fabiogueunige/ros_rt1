@@ -1,0 +1,6 @@
+---
+# Response
+float64 distance_target #distance to target
+float64 avg_speed_x #average speed x
+float64 avgspeed_ang_z #average speed angular z
+#float64 avgspeedtot
