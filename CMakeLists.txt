@@ -15,6 +15,7 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   sensor_msgs
+  message_generation
   std_msgs
   std_srvs
   tf
@@ -54,18 +55,18 @@ find_package(catkin REQUIRED COMPONENTS
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
-# add_message_files(
-#   FILES
-#   Message1.msg
+ add_message_files(
+   FILES
+   Robotinfo.msg
 #   Message2.msg
-# )
+ )
 
 ## Generate services in the 'srv' folder
-# add_service_files(
-#   FILES
-#   Service1.srv
-#   Service2.srv
-# )
+ add_service_files(
+   FILES
+   LastTarget.srv
+   SpeedDistance.srv
+ )
 
 ## Generate actions in the 'action' folder
  add_action_files(
@@ -198,6 +199,14 @@ include_directories(
 #   # myfile2
 #   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 # )
+
+## Mark other files for installation (e.g. launch and bag files, etc.)
+ install(
+    DIRECTORY config/
+    DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/config
+    FILES_MATCHING PATTERN "*.yaml"
+  )
+
 
 #############
 ## Testing ##

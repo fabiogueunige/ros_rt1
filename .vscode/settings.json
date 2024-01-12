@@ -6,5 +6,6 @@
     "python.analysis.extraPaths": [
         "/home/fabio/reserchRobot/rosRobot/devel/lib/python3/dist-packages",
         "/home/fabio/ros_catkin_ws/install_isolated/lib/python3/dist-packages"
-    ]
+    ],
+    "cmake.configureOnOpen": false
 }
