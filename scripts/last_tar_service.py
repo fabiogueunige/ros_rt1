@@ -29,12 +29,12 @@ def target_service_callback(request):
     global postarx, postary
 
     # Create the response
-    resp = LastTargetResponse()
-    resp.tar_pose_x = postarx
-    resp.tar_pose_y = postary
+    #resp = LastTargetResponse()
+    #resp.tar_pose_x = postarx
+    #resp.tar_pose_y = postary
 
     # Return the response
-    return resp
+    return LastTargetResponse(postarx, postary)
     
 def target_sub_callback(msg):
     """
@@ -48,8 +48,8 @@ def target_sub_callback(msg):
     global subgoal
     global postarx, postary
 
-    postarx = msg.goal.position.x
-    postary = msg.goal.position.y
+    postarx = msg.goal.target_pose.pose.position.x
+    postary = msg.goal.target_pose.pose.position.y
 
 
 def last_tar_service():
