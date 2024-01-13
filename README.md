@@ -63,7 +63,8 @@ This project has several areas of improvements:
 
 ## Code explenation
 -------------------
-This directory is a follow up of [link](https://github.com/CarmineD8/assignment_2_2023.git).  
+This directory is a follow up of [CarmineD8/assignment_2_2023
+](https://github.com/CarmineD8/assignment_2_2023.git).  
 So here a fast introduction of the nodes already implemented:
 **bug_as.py:** Decides the robot operation in base of its state developing the information given by the services and the messages such as the laser scan and the odometry.  
 **go_to_point_service.py:** Implements a finite sate machine that check and update the status of the robot depending on reaching the desired position. 
@@ -162,7 +163,29 @@ action_client() definition:
       else:
           print(No operation has been done)
 ```
+main() definition:
+```
+"""
+    global pubInfo, subOdom # Global variable definition
+    
+    time.sleep(1) # Wait for gazebo to be up and running
 
+    rospy.init_node('action_client') # Initialize the node
+ 
+    pubInfo =  publisher for velocity and position
+
+    # Call the 
+    subOdom = subscriber from Odom for position and velocity
+
+    # Call the function
+    action_client()
+
+if __name__ == '__main__':
+    try:
+        main() # Call the main function
+    except rospy.ROSInterruptException:
+        Print error message
+```
   
 
 
