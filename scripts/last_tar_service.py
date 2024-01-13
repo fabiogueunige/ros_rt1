@@ -4,13 +4,12 @@ import rospy
 from assignment_2_2023 import srv
 from assignment_2_2023 import msg
 from assignment_2_2023.srv import LastTarget, LastTargetResponse
-from assignment_2_2023.msg import PlanningActionGoal, PlanningGoal
+from assignment_2_2023.msg import PlanningActionGoal
 import time
 
 subgoal = None
 servicetarget = None
 
-# /reaching_goal/goal
 def target_service_callback(request):
     """
     Callback function for the service server of the last target

@@ -1,20 +1,13 @@
 #! /usr/bin/env python3
 
-"""
-Another service node that subscribes to the robot’s position and velocity 
-(using the custom message) and implements a server to retrieve the distance 
-of the robot from the target and the robot’s average speed.
-"""
 import rospy
 #from geometry_msgs.msg import Point, Pose, Twist
 from nav_msgs.msg import Odometry
-import actionlib
 import actionlib.msg
 import math
-import assignment_2_2023.msg
 import assignment_2_2023.srv
 from assignment_2_2023.msg import Robotinfo
-from assignment_2_2023.msg import PlanningAction, PlanningGoal, PlanningResult, PlanningActionGoal
+from assignment_2_2023.msg import PlanningActionGoal
 from actionlib_msgs.msg import GoalStatus
 from assignment_2_2023.srv import SpeedDistance, SpeedDistanceResponse
 import time

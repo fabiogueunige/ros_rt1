@@ -1,13 +1,11 @@
 #! /usr/bin/env python3
 
 import rospy
-#from geometry_msgs.msg import Point, Pose, Twist
 from nav_msgs.msg import Odometry
 import actionlib
 import actionlib.msg
 import assignment_2_2023.msg
 from assignment_2_2023.msg import Robotinfo
-from assignment_2_2023.msg import PlanningAction, PlanningGoal, PlanningResult, PlanningActionResult
 from actionlib_msgs.msg import GoalStatus
 import time
 
@@ -15,11 +13,6 @@ import time
 pubInfo = None
 subOdom = None  
 clienttar = None
-
-# AGGIUNGI ROUND AI MESSAGGI (TUTTI DIREI) POS E VEL PER EVITARE DI PUBBLICARE NUMERI TROPPPO LUNGHI
-# AGGIUNGI LA STAMPA DEL FEEDBACK AL GOAL
-# SCEGLI SE DARE LA IMPOSTAZIONE DI DARE UN NUOVO TARGET ANCHE QUANDO UNO E GIA PRESENTE
-# CONTROLLA CHE FUNZIONI DAVVERO LA CARTELLA GIT ANCHE SE CAMBI IL NOME DELLA CARTELLA PER GIT
 
 
 def insertNumber():
@@ -37,7 +30,6 @@ def insertNumber():
         inpx = input("x: ")
         try:
             inpx = float(inpx)
-            # to exit form the while loop
             break
         except:
             print("Please insert a valid number")
@@ -89,7 +81,7 @@ def action_client():
     # Create a goal to send (to the action server)
     goal = assignment_2_2023.msg.PlanningGoal()
 
-    # implements the coordinates acquisition
+    # Implements the coordinates acquisition
     inpx, inpy = insertNumber()
 
     # Update the goal
@@ -100,11 +92,11 @@ def action_client():
     clienttar.send_goal(goal)
     print("You sent the goal with: X = ", goal.target_pose.pose.position.x," Y = ", goal.target_pose.pose.position.y)
 
-    while not rospy.is_shutdown(): # can sobstitute with rospy.spin()
+    while not rospy.is_shutdown(): 
         # Input from the user
         choice = input("Do you want to insert a new goal? (y/n) ")
         if (choice == 'y'):
-            # implements the coordinates acquisition
+            # Implements the coordinates acquisition
             inpx, inpy = insertNumber()
 
             # Update the goal
@@ -117,7 +109,6 @@ def action_client():
         else:
             choice = input("Do you want to cancel the previouse goal and restore ? (y/n) ")
             if (choice == 'y'):
-                # add the control to the status of the goal!!
                 if (clienttar.get_state() == GoalStatus.ACTIVE):
                     print("You canceled the goal with: X = ", goal.target_pose.pose.position.x," Y = ", goal.target_pose.pose.position.y)
                     clienttar.cancel_goal() 
@@ -125,10 +116,6 @@ def action_client():
                     print("The goal has already finished or it was already canceled")
             else:
                 print("No Operations has been done")
-        
-   
-    # Return the result
-    # return client.get_result()
 
 def main():
     """
