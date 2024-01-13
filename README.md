@@ -53,9 +53,13 @@ The actual organization is composed by two branches:
 * readRes -> All the resources for the Readme construction.
 
 ## Possible improvements
+------------------------
 
 
-## Pseudocode of action_client.py
+## Code explenation
+-------------------
+
+### Pseudocode actioncllient.py
 
 
 
