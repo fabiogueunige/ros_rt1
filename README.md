@@ -5,7 +5,8 @@
 This is the second assignment for the Research Track I course of Robotics Engineering Master Degree in Genoa.
 This project involves simulating the movement of a robot in a 3D wordl environment. Users can input a specific position that the robot will attempt to reach. Additionally, users can cancel the goal while the robot is in the process of reaching it. Throughout this simulation, it is possible to view key information about the robot by subscribing to messages or services.
 
-Here an example:
+Here an example: 
+
 ![gif funzionamento](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdG9ydG1zbzU2MnUxdmFkdGt5ZjFheWk4ZzFlZ3dqd2hxeHd3MWd1OSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/wPymwQwoxHJQOBmrak/giphy-downsized-large.gif)
 
 ## Installing and running
