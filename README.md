@@ -121,7 +121,7 @@ odom_callback(message) definition:
 action_client() definition:
   function to implement the client to reaching goal topic to see the state of the Robot in relationship with the target of the user
 ```
-  clienttar = subsscription to the topic of the server to send the goal
+  global clienttar
 
   clienttar.wait_for_server() # Wait until the action server is up and running.
   
@@ -174,7 +174,9 @@ main() definition:
     time.sleep(1) # Wait for gazebo to be up and running
 
     rospy.init_node('action_client') # Initialize the node
- 
+
+    clienttar = subsscription to the topic of the server to send the goal
+
     pubInfo =  publisher for velocity and position
 
     # Call the 
