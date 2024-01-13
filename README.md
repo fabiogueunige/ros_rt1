@@ -1,5 +1,4 @@
 # Research Track Assignment 2
-================================
 
 ## Short Description
 ---------------------
