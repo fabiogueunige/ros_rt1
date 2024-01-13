@@ -12,30 +12,31 @@ Here an example:
 -------------------------
 The simulator requires:
 * [Ros installation](https://wiki.ros.org/ROS/Installation) follow all the instructions to build the ros-workspace
-
+* Xterm installation. Run:
+`$ sudo apt-get -y install xterm`
 The package installation:
 * Download the git repository inside the ros workaspace/src
 in path: `~rosworkspace/src`
 ```
-git clone https://github.com/fabiogueunige/ros_rt1.git
+$ git clone https://github.com/fabiogueunige/ros_rt1.git
 ```
 * Make all the python file executable
 in path: `~rosworkspace/src/PACKAGE/scripts`
 ```
-chmod +x *.py
+$ chmod +x *.py
 ```
 * Inside the ros workspace build the package with `catkin_make`
 in path: `~rosworkspace`
 ```
-catkin_make
+$ catkin_make
 ```
 * launch the wordl and all the nodes
 ```
-roslaunch PACKAGE assignment1.launch
+$ roslaunch assignment_2_2023 assignment1.launch
 ```
 If you want to launch the nodes separately
 ```
-rosrun PACKAGE nodename.py
+$ rosrun assignment_2_2023 nodename.py
 ```
 Instead, to call the services developed to see the velocity of the robot and the target coordinates:
 * robot info: `rosservice call /dis_speed`
@@ -54,10 +55,22 @@ The actual organization is composed by two branches:
 
 ## Possible improvements
 ------------------------
-
+This project has several areas of improvements:
+* movement: The Robot moves really slow and the movement decision is not the optimal one. In fact it would be possible to make the robot rotate in the best possible direction and not always in the prefixed one. It would be possible also to make the robot faster especially when it detects the wall and has to rotate.
+* robot message: The message and the service showed often has some accuracy errors. So it may be useful to add some threshold to hide them.
+* User Interface: The usage of Xterm library improves a lot the user interface, but it is still minimalist and difficult to understand. So it may be a good implementation add more user input directly from more than one terminal (e.g to run all the services developed).
+* environment: The environment for the robot movement can be updated adding some obstacles or a graphical view of the desired goal directly into the interface.
 
 ## Code explenation
 -------------------
+This directory is a follow up of [link](https://github.com/CarmineD8/assignment_2_2023.git)
+So here a fast introduction of the nodes already implemented:
+**bug_as.py:**Decides the robot operation in base of its state developing the information given by the services and the messages such as the laser scan and the odometry
+**go_to_point_service.py:** Implements a finite sate machine that check and update the status of the robot depending on reaching the desired position.
+**wall_follow_service:** Makes the robot follow a wall to drive around it. In the meanwhile it processes datas to detect obstacles and avoid them with an 180 degrees view (front, left and right).
+
+### Assignment implementation
+
 
 ### Pseudocode actioncllient.py
 
