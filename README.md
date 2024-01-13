@@ -16,18 +16,18 @@ The simulator requires:
 
 The package installation:
 * Download the git repository inside the ros workaspace/src
+in path: `~rosworkspace/src`
 ```
-path: ~rosworkspace/src
 git clone https://github.com/fabiogueunige/ros_rt1.git
 ```
 * Make all the python file executable
+in path: `~rosworkspace/src/PACKAGE/scripts`
 ```
-path: ~rosworkspace/src/PACKAGE/scripts
 chmod +x *.py
 ```
 * Inside the ros workspace build the package with `catkin_make`
+in path: `~rosworkspace`
 ```
-path: ~rosworkspace
 catkin_make
 ```
 * launch the wordl and all the nodes
@@ -42,41 +42,23 @@ Instead, to call the services developed to see the velocity of the robot and the
 * robot info: `rosservice call /dis_speed`
 * target coordinates: `rosservice call /last_target`
 
+### Troubleshooting
+After closing all the nodes, some gazebo servoces may be remain opened and so, may create some errors relaunching the environments:
+if that insert in to the trminal `killall gzserver`
 
-## Assignment 2 (to do)
-Problem here! The task is blocking and I cannot do anything while the robot is reaching the target.
-This is one of the long-running tasks that should be implemented with an action server!
-[The package assignment_2_2022](https://github.com/CarmineD8/assignment_2_2023)
-provides an implementation of the same node as an action server
-What should you do here?
-- Create a new package, in which you will develop three nodes:
-- (a) A node that implements an action client, allowing the user to set a target (x, y) or to cancel it. Try to use the
-feedback/status of the action server to know when the target has been reached. The node also publishes the
-robot position and velocity as a custom message (x,y, vel_x, vel_z), by relying on the values published on the
-topic /odom;
-- (b) A service node that, when called, returns the coordinates of the last target sent by the user;
-- (c) Another service node that subscribes to the robot’s position and velocity (using the custom message) and
-implements a server to retrieve the distance of the robot from the target and the robot’s average speed.
-- Create a launch file to start the whole simulation. Use a parameter to select the size of the averaging window of node (c)
+## Contribution
+---------------
+Please, do not push changes to this project, but if you want you are free to download it.  
+The actual organization is composed by two branches:
+* master -> There are all the files necessary for the environment and the Robot operation.
+* readRes -> All the resources for the Readme construction.
 
-### Additional Requirements:
-- Only for node (a): Create a flowchart of your code, or describe it in pseudocode (Pseudocode Examples
-(unf.edu))
-- Add some comments to the code
-- Use functions to avoid having a single block of code
-- Publish the new package on your own repository. The flowchart (or the pseudocode) should be added to the
-ReadMe of the repository. (consider using Markdown syntax to write your readme: Basic Syntax | Markdown
-Guide)
+## Possible improvements
 
-### Deadline
-Deadline: 12/01/2024
 
-### Evaluetion
-- Code performance
-- Code structure and clarity
-- Respect of the requirements
-- Organization of the repository (e.g., README in which you describe what the code does (possibly with
-flowchart or pseudocode), how to run the code, possible improvements, … )
+## Pseudocode of action_client.py
+
+
 
 
 
