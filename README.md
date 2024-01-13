@@ -63,17 +63,107 @@ This project has several areas of improvements:
 
 ## Code explenation
 -------------------
-This directory is a follow up of [link](https://github.com/CarmineD8/assignment_2_2023.git)
+This directory is a follow up of [link](https://github.com/CarmineD8/assignment_2_2023.git).  
 So here a fast introduction of the nodes already implemented:
-**bug_as.py:**Decides the robot operation in base of its state developing the information given by the services and the messages such as the laser scan and the odometry
-**go_to_point_service.py:** Implements a finite sate machine that check and update the status of the robot depending on reaching the desired position.
-**wall_follow_service:** Makes the robot follow a wall to drive around it. In the meanwhile it processes datas to detect obstacles and avoid them with an 180 degrees view (front, left and right).
+**bug_as.py:** Decides the robot operation in base of its state developing the information given by the services and the messages such as the laser scan and the odometry.  
+**go_to_point_service.py:** Implements a finite sate machine that check and update the status of the robot depending on reaching the desired position. 
+ 
+ **wall_follow_service:** Makes the robot follow a wall to drive around it. In the meanwhile it processes datas to detect obstacles and avoid them with an 180 degrees view (front, left and right).
 
 ### Assignment implementation
-
+The assignment requires the implementation of the desired position acquisition user side.
+The nodes implemented are:
+* **action_client.py** to send to bug_as.py the goal position chose by the user and to publish all the information about the actual position of the robot and its velocity. The message is the RobotInfo.msg inside the msg folder.
+*  **last_tar_service.py** to create a service that can be call by the user with the position of the target informations. The service is LastTarget.srv inside the srv folder
+*  **dis_speed_service** to retrieve the distance of the robot from the target and the avarage speed of the robot along the x axis and the angular speed in case of rotation.
 
 ### Pseudocode actioncllient.py
+Interpreter declaration for Python3
+`#! /usr/bin/env python3`
 
+Import of all the necessary libraries
+
+Declaration of the global variables needed by more functions
+```
+- pubInfo # publisher of RobotInfo message
+- subOdom # Subscriber to Odom topic
+```
+insertNumber() definition:
+  function to take the user input for the target
+```
+  while()
+    inp = user input
+    try: # to stay alive also with some errors
+      inp = float transformation from string
+      break to exit from the while
+    except:
+       print() # advice the user to insert numbers
+# This is develop for x input and y input 
+```
+odom_callback(message) definition:
+  function called when the subscriber receives the information from the Odom topic
+```
+  global pubInfo # to add the publisher to the method
+
+  msgInfo declaration as RobotInfo object
+  msgInfo = Robotinfo()
+  msgInfo.pos_x = position of x of the Robot
+  msgInfo.pos_y = position as y of the Robot
+  msgInfo.vel_x = velocity along x of the Robot
+  msgInfo.vel_ang_z = velocity along y of the Robot
+ 
+  pubInfo.publish(msgInfo) # Publish the message
+```
+action_client() definition:
+  function to implement the client to reaching goal topic to see the state of the Robot in relationship with the target of the user
+```
+  clienttar = subsscription to the topic of the server to send the goal
+
+  clienttar.wait_for_server() # Wait until the action server is up and running.
+  
+  # User interface initialization
+  print("")
+  print("")
+  print("")
+
+  goal = Definition of the goal to send to the action server
+ 
+  inpx, inpy = insertNumber() # coordinates acquisition
+  
+  # Update the goal
+  goal.target_pose.pose.position.x = inpx
+  goal.target_pose.pose.position.y = inpy
+  
+  
+  clienttar.send_goal(goal) # Sending the goal
+  print("") # To user comunication
+  
+  while not rospy.is_shutdown(): # while until the node is alive
+  # New inputs from the user to decide what to do
+  choice = input(if to insert a new goal)
+  if (choice == 'y'):
+      inpx, inpy = insertNumber() # coordinates acquisition
+  
+      # Update the goal
+      goal.target_pose.pose.position.x = inpx
+      goal.target_pose.pose.position.y = inpy
+  
+      
+      clienttar.send_goal(goal) # Send the goal
+      print() # To user comunication
+  else:
+      choice = input("if to cancel the goal")
+      if (choice == 'y'):
+          if (the goal is in progress):
+              print(goal information)
+              clienttar.cancel_goal() # cancel the goal
+          else:
+              print("The goal has already finished or it was already canceled")
+      else:
+          print(No operation has been done)
+```
+
+  
 
 
 
