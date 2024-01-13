@@ -79,6 +79,8 @@ The nodes implemented are:
 *  **last_tar_service.py** to create a service that can be call by the user with the position of the target informations. The service is LastTarget.srv inside the srv folder
 *  **dis_speed_service** to retrieve the distance of the robot from the target and the avarage speed of the robot along the x axis and the angular speed in case of rotation.
 
+![Scheme show](https://github.com/fabiogueunige/ros_rt1/blob/readRes/rosgraph.png)
+
 ### Pseudocode actioncllient.py
 Interpreter declaration for Python3
 `#! /usr/bin/env python3`
