@@ -72,7 +72,7 @@ def dis_speed_service_callback(request):
         avg = 0
     resp = SpeedDistanceResponse()
     # Add the distance to the response
-    resp.distance_target = avg
+    resp.distance_target = round(avg,3)
 
     # Avarage speed on x
     try:
@@ -83,7 +83,7 @@ def dis_speed_service_callback(request):
         rospy.loginfo("The target has not been moved yet")
         resp.avgspeedx = 0
     # Add the speed  x to the response
-    resp.avg_speed_x = avg
+    resp.avg_speed_x = round(avg,3)
 
     # Avarage speed on z
     try:
@@ -94,7 +94,7 @@ def dis_speed_service_callback(request):
         rospy.loginfo("The target has not been moved yet")
         avg = 0
     # Add the speed z to the response
-    resp.avgspeed_ang_z = avg
+    resp.avgspeed_ang_z = round(avg,3)
     
     # Return service
     return resp

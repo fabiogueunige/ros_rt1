@@ -62,10 +62,10 @@ def odom_callback(msg):
 
     # Create the message to publish
     msgInfo = Robotinfo()
-    msgInfo.pos_x = msg.pose.pose.position.x
-    msgInfo.pos_y = msg.pose.pose.position.y
-    msgInfo.vel_x = msg.twist.twist.linear.x
-    msgInfo.vel_ang_z = msg.twist.twist.angular.z
+    msgInfo.pos_x = round(msg.pose.pose.position.x,3)
+    msgInfo.pos_y = round(msg.pose.pose.position.y,3)
+    msgInfo.vel_x = round(msg.twist.twist.linear.x,3)
+    msgInfo.vel_ang_z = round(msg.twist.twist.angular.z,3)
 
     # Publish the message
     pubInfo.publish(msgInfo)

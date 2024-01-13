@@ -28,6 +28,9 @@ def target_service_callback(request):
     global subgoal
     global postarx, postary
 
+    # Cutting the values to 3 decimals
+    postarx = round(postarx,3)
+    postary = round(postary,3)
     # Return the response for the service
     return LastTargetResponse(postarx, postary)
     

@@ -79,7 +79,7 @@ actionlib
    DEPENDENCIES
    actionlib_msgs
    geometry_msgs
-  #std_msgs
+   std_msgs
  )
 
 ################################################
