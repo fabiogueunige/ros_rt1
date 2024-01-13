@@ -1,8 +1,0 @@
-# goal definition
-geometry_msgs/PoseStamped target_pose
----
-# result definition (empty)
----
-# feedback definition
-geometry_msgs/Pose actual_pose
-string stat
