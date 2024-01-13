@@ -18,6 +18,7 @@ subOdom = None
 # AGGIUNGI ROUND AI MESSAGGI (TUTTI DIREI) POS E VEL PER EVITARE DI PUBBLICARE NUMERI TROPPPO LUNGHI
 # AGGIUNGI LA STAMPA DEL FEEDBACK AL GOAL
 # SCEGLI SE DARE LA IMPOSTAZIONE DI DARE UN NUOVO TARGET ANCHE QUANDO UNO E GIA PRESENTE
+# CONTROLLA CHE FUNZIONI DAVVERO LA CARTELLA GIT ANCHE SE CAMBI IL NOME DELLA CARTELLA PER GIT
 
 
 def insertNumber():
@@ -81,9 +82,9 @@ def action_client():
     clienttar.wait_for_server()
 
     # User interface
-    rospy.loginfo("Hi, welcome to the robot planner simulation")
-    rospy.loginfo("Please choose the position you want to reach with the robot")
-    rospy.loginfo("Insert the coordinates to reach as ")
+    print("Hi, welcome to the robot planner simulation")
+    print("Please choose the position you want to reach with the robot")
+    print("Insert the coordinates to reach as ")
     
     # Create a goal to send (to the action server)
     goal = assignment_2_2023.msg.PlanningGoal()
@@ -97,7 +98,7 @@ def action_client():
 
     # Sending the goal
     clienttar.send_goal(goal)
-    rospy.loginfo("You sent the goal with: X = %f, Y = %f", goal.target_pose.pose.position.x, goal.target_pose.pose.position.y)
+    print("You sent the goal with: X = ", goal.target_pose.pose.position.x," Y = ", goal.target_pose.pose.position.y)
 
     while not rospy.is_shutdown(): # can sobstitute with rospy.spin()
         # Input from the user
@@ -112,18 +113,18 @@ def action_client():
 
             # Send the goal
             clienttar.send_goal(goal)
-            rospy.loginfo("You sent the goal with: X = %f, Y = %f", goal.target_pose.pose.position.x, goal.target_pose.pose.position.y)
+            print("You sent the goal with: X = ", goal.target_pose.pose.position.x," Y = ", goal.target_pose.pose.position.y)
         else:
             choice = input("Do you want to cancel the previouse goal and restore ? (y/n)")
             if (choice == 'y'):
                 # add the control to the status of the goal!!
                 if (clienttar.get_state() == GoalStatus.ACTIVE):
-                    rospy.loginfo("You canceled the goal with: X = %f, Y = %f", goal.target_pose.pose.position.x, goal.target_pose.pose.position.y)
+                    print("You canceled the goal with: X = %f, Y = %f", goal.target_pose.pose.position.x, goal.target_pose.pose.position.y)
                     clienttar.cancel_goal() 
                 else:
-                    rospy.loginfo("The goal has already finished or it was already canceled")
+                    print("The goal has already finished or it was already canceled")
             else:
-                rospy.loginfo("The goal is still active with X = %f, Y = %f", goal.target_pose.pose.position.x, goal.target_pose.pose.position.y)
+                print("The goal is still active with: X = ", goal.target_pose.pose.position.x," Y = ", goal.target_pose.pose.position.y)
         
    
     # Return the result

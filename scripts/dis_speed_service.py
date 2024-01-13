@@ -95,21 +95,6 @@ def dis_speed_service_callback(request):
         avg = 0
     # Add the speed z to the response
     resp.avgspeed_ang_z = avg
-
-    # Avarage speed
-    #for i in range(len(listspeedx)):
-        #try:
-            #avg += math.sqrt((listspeedx[i] + listspeedz[i])**2)
-        #except:
-            #rospy.loginfo("Error in the calculation of the average speed total")
-            #rospy.loginfo("The target has not been moved yet")
-            #avg = 0
-    #try:
-        #avg = avg/len(listspeedx)
-    #except:
-        #avg = 0
-    # Add the speed to the response
-    #resp.avgspeedtot = avg
     
     # Return service
     return resp
