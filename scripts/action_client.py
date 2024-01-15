@@ -4,15 +4,20 @@ import rospy
 from nav_msgs.msg import Odometry
 import actionlib
 import actionlib.msg
+from sensor_msgs.msg import LaserScan
 import assignment_2_2023.msg
-from assignment_2_2023.msg import Robotinfo
+from assignment_2_2023.msg import Robotinfo, Nextobs
 from actionlib_msgs.msg import GoalStatus
 import time
+from assignment_2_2023.srv import LastTarget, LastTargetRequest
 
 # Global variables
 pubInfo = None
 subOdom = None  
 clienttar = None
+proxytar = None
+subObs = None
+pubnextObs = None
 
 
 def insertNumber():
@@ -68,7 +73,7 @@ def action_client():
     Function to implement the action client
     """
 
-    global clienttar
+    global clienttar, proxytar
 
     # Wait until the action server is up and running.
     clienttar.wait_for_server()
@@ -91,6 +96,16 @@ def action_client():
     # Sending the goal
     clienttar.send_goal(goal)
     print("You sent the goal with: X = ", goal.target_pose.pose.position.x," Y = ", goal.target_pose.pose.position.y)
+
+    # Request to the last target service (to know how to do it)
+    rospy.wait_for_service("last_target")
+    req_target = LastTargetRequest()
+    print("Requesting the last target")
+    try:
+        resp = proxytar(req_target)
+        print("The last target was: X = ", resp.tar_pose_x," Y = ", resp.tar_pose_y)
+    except rospy.ServiceException as e:
+        print("Service call failed: %s"%e)
 
     while not rospy.is_shutdown(): 
         # Input from the user
@@ -117,11 +132,30 @@ def action_client():
             else:
                 print("No Operations has been done")
 
+def clbk_laser(msg):
+    global pubnextObs
+
+    msgObs = Nextobs()
+    try:
+        min_range = min(msg.ranges[0:719])
+        msgObs.dis = min_range
+    except ValueError:
+        print("Errore: l'array msg.ranges potrebbe essere vuoto o non contenere valori comparabili.")
+    except AttributeError:
+        print("Errore: l'oggetto msgObs potrebbe non avere una proprietà 'dis'.")
+    except IndexError:
+        print("Errore: l'array msg.ranges potrebbe non avere almeno 720 elementi.")
+
+    # print("Distanza minima: ", msgObs.dis)
+
+    pubnextObs.publish(msgObs)
+        
+
 def main():
     """
     Main function
     """
-    global pubInfo, subOdom, clienttar
+    global pubInfo, subOdom, clienttar, proxytar, subObs, pubnextObs  
     
     # Wait for gazebo to be up and running
     time.sleep(1)
@@ -137,6 +171,12 @@ def main():
 
     # Call the subscriber from Odom for position and velocity
     subOdom = rospy.Subscriber('/odom', Odometry, odom_callback)
+
+    proxytar = rospy.ServiceProxy('/last_target', LastTarget)
+
+    subObs = rospy.Subscriber("/scan", LaserScan, clbk_laser)
+
+    pubnextObs = rospy.Publisher('/next_obs', Nextobs, queue_size=1)
 
     # Call the function
     action_client()

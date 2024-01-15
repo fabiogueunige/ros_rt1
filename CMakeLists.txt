@@ -58,6 +58,7 @@ actionlib
  add_message_files(
    FILES
    Robotinfo.msg
+   Nextobs.msg
 #   Message2.msg
  )
 
