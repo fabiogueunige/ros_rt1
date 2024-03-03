@@ -64,6 +64,11 @@ This project has several areas of improvements:
 
 ## Code explenation
 -------------------
+
+### Documentation
+[ros_rt1 documentation](https://fabiogueunige.github.io/ros_rt1/)
+
+### Introduction
 This directory is a follow up of [CarmineD8/assignment_2_2023
 ](https://github.com/CarmineD8/assignment_2_2023.git).  
 So here a fast introduction of the nodes already implemented:
