@@ -58,6 +58,7 @@ actionlib
  add_message_files(
    FILES
    Robotinfo.msg
+   Robotinfofeet.msg
 #   Message2.msg
  )
 
@@ -66,6 +67,7 @@ actionlib
    FILES
    LastTarget.srv
    SpeedDistance.srv
+   CancelGoal.srv
  )
 
 ## Generate actions in the 'action' folder

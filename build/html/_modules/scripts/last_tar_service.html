@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>scripts.last_tar_service &#8212; ros_rt1 0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=4f649999" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=cb25574f" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=eafc0fe6" />
+    <script src="../../_static/documentation_options.js?v=2709fde1"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <h1>Source code for scripts.last_tar_service</h1><div class="highlight"><pre>
+<span></span><span class="ch">#! /usr/bin/env python3</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">.. module:: last_tar_service</span>
+<span class="sd">    :platform: Unix</span>
+<span class="sd">    :synopsis: Python module for the service server of the last target</span>
+
+<span class="sd">.. moduleauthor:: Fabio Guelfi</span>
+
+<span class="sd">This module is the service server for the assignment 2 of the course 2023.</span>
+<span class="sd">It is used to return the last target of the robot.</span>
+<span class="sd">It also subscribes to the goal to know the last target.</span>
+
+<span class="sd">Subscribes to:</span>
+<span class="sd">    /reaching_goal/goal</span>
+
+<span class="sd">Service:</span>
+<span class="sd">    /last_target</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">rospy</span>
+<span class="kn">from</span> <span class="nn">assignment_2_2023</span> <span class="kn">import</span> <span class="n">srv</span>
+<span class="kn">from</span> <span class="nn">assignment_2_2023</span> <span class="kn">import</span> <span class="n">msg</span>
+<span class="kn">from</span> <span class="nn">assignment_2_2023.srv</span> <span class="kn">import</span> <span class="n">LastTarget</span><span class="p">,</span> <span class="n">LastTargetResponse</span>
+<span class="kn">from</span> <span class="nn">assignment_2_2023.msg</span> <span class="kn">import</span> <span class="n">PlanningActionGoal</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="n">subgoal</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">servicetarget</span> <span class="o">=</span> <span class="kc">None</span>
+
+<div class="viewcode-block" id="target_service_callback">
+<a class="viewcode-back" href="../../index.html#scripts.last_tar_service.target_service_callback">[docs]</a>
+<span class="k">def</span> <span class="nf">target_service_callback</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Callback function for the service server of the last target</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">    request(LastTargetRequest): request from the client</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    LastTargetResponse: response to the client</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">global</span> <span class="n">subgoal</span>
+    <span class="k">global</span> <span class="n">postarx</span><span class="p">,</span> <span class="n">postary</span>
+
+    <span class="c1"># Cutting the values to 3 decimals</span>
+    <span class="n">postarx</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">postarx</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">postary</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">postary</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+    <span class="c1"># Return the response for the service</span>
+    <span class="k">return</span> <span class="n">LastTargetResponse</span><span class="p">(</span><span class="n">postarx</span><span class="p">,</span> <span class="n">postary</span><span class="p">)</span></div>
+
+    
+<div class="viewcode-block" id="target_sub_callback">
+<a class="viewcode-back" href="../../index.html#scripts.last_tar_service.target_sub_callback">[docs]</a>
+<span class="k">def</span> <span class="nf">target_sub_callback</span><span class="p">(</span><span class="n">msg</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Callback function for the subscriber of the goal</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">    msg(PlanningActionGoal): message from the topic</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">global</span> <span class="n">subgoal</span>
+    <span class="k">global</span> <span class="n">postarx</span><span class="p">,</span> <span class="n">postary</span>
+
+    <span class="c1"># Savings the values in the global variables</span>
+    <span class="n">postarx</span> <span class="o">=</span> <span class="n">msg</span><span class="o">.</span><span class="n">goal</span><span class="o">.</span><span class="n">target_pose</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">x</span>
+    <span class="n">postary</span> <span class="o">=</span> <span class="n">msg</span><span class="o">.</span><span class="n">goal</span><span class="o">.</span><span class="n">target_pose</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">y</span></div>
+
+
+
+<div class="viewcode-block" id="last_tar_service">
+<a class="viewcode-back" href="../../index.html#scripts.last_tar_service.last_tar_service">[docs]</a>
+<span class="k">def</span> <span class="nf">last_tar_service</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Main function for the service server of the last target</span>
+<span class="sd">    It defines the service server for the last target and the subscriber to the goal</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">global</span> <span class="n">subgoal</span><span class="p">,</span> <span class="n">servicetarget</span>
+
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="c1"># Initialize the node</span>
+    <span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s1">&#39;last_target&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Create the subscriber</span>
+    <span class="n">subgoal</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Subscriber</span><span class="p">(</span><span class="s1">&#39;/reaching_goal/goal&#39;</span><span class="p">,</span> <span class="n">PlanningActionGoal</span><span class="p">,</span> <span class="n">target_sub_callback</span><span class="p">)</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Create the goal subscriber to reaching goal</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="c1"># Create the service</span>
+    <span class="n">servicetarget</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Service</span><span class="p">(</span><span class="s1">&#39;/last_target&#39;</span><span class="p">,</span> <span class="n">LastTarget</span><span class="p">,</span> <span class="n">target_service_callback</span><span class="p">)</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Create the service server for the last target</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># Spin</span>
+    <span class="n">rospy</span><span class="o">.</span><span class="n">spin</span><span class="p">()</span></div>
+
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># Call the main function</span>
+        <span class="n">last_tar_service</span><span class="p">()</span>
+    <span class="k">except</span> <span class="n">rospy</span><span class="o">.</span><span class="n">ROSInterruptException</span><span class="p">:</span>
+        <span class="c1"># Print the error</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Errors in last_tar_service.py&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;program interrupted before completion for errors&quot;</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span>
+        <span class="k">pass</span>
+</pre></div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">ros_rt1</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2024, Fabio Guelfi.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.2.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,5 +1,23 @@
 #! /usr/bin/env python3
 
+"""
+.. module:: last_tar_service
+    :platform: Unix
+    :synopsis: Python module for the service server of the last target
+
+.. moduleauthor:: Fabio Guelfi
+
+This module is the service server for the assignment 2 of the course 2023.
+It is used to return the last target of the robot.
+It also subscribes to the goal to know the last target.
+
+Subscribes to:
+    /reaching_goal/goal
+
+Service:
+    /last_target
+"""
+
 import rospy
 from assignment_2_2023 import srv
 from assignment_2_2023 import msg
@@ -14,15 +32,11 @@ def target_service_callback(request):
     """
     Callback function for the service server of the last target
 
-    Parameters
-    ----------
-    request : LastTarget
-        request from the service server
+    Args:
+    request(LastTargetRequest): request from the client
 
-    Returns
-    -------
-    LastTargetResponse
-        response from the service server
+    Returns:
+    LastTargetResponse: response to the client
     """
     global subgoal
     global postarx, postary
@@ -37,10 +51,8 @@ def target_sub_callback(msg):
     """
     Callback function for the subscriber of the goal
 
-    Parameters
-    ----------
-    msg : PlanningGoal
-        message from the subscriber
+    Args:
+    msg(PlanningActionGoal): message from the topic
     """
     global subgoal
     global postarx, postary
@@ -53,6 +65,7 @@ def target_sub_callback(msg):
 def last_tar_service():
     """
     Main function for the service server of the last target
+    It defines the service server for the last target and the subscriber to the goal
     """
     global subgoal, servicetarget
 
@@ -62,9 +75,14 @@ def last_tar_service():
 
     # Create the subscriber
     subgoal = rospy.Subscriber('/reaching_goal/goal', PlanningActionGoal, target_sub_callback)
+    """Create the goal subscriber to reaching goal
+    """
+    
     # Create the service
     servicetarget = rospy.Service('/last_target', LastTarget, target_service_callback)
-    
+    """Create the service server for the last target
+    """
+
     # Spin
     rospy.spin()
 

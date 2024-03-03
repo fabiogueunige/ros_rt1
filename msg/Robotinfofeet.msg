@@ -1,0 +1,2 @@
+float64 feet_x
+float64 feet_y
