@@ -1,54 +1,267 @@
 <!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<html lang="en" data-content_root="./">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to ros_rt1’s documentation! &mdash; ros_rt1 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
 
-    <title>Welcome to ros_rt1’s documentation! &#8212; ros_rt1 0.1 documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=4f649999" />
-    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=cb25574f" />
-    <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
-    <script src="_static/documentation_options.js?v=2709fde1"></script>
-    <script src="_static/doctools.js?v=888ff710"></script>
-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=2709fde1"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-   
-  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
 
-  </head><body>
-  
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
           
+          
+          <a href="#" class="icon icon-home">
+            ros_rt1
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Welcome to ros_rt1’s documentation!</a></li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a><ul>
+<li><a class="reference internal" href="#ros-rt1-documentation">ros_rt1 documentation!</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-scripts.action_client">action_client Module</a><ul>
+<li><a class="reference internal" href="#scripts.action_client.CancelGoal"><code class="docutils literal notranslate"><span class="pre">CancelGoal</span></code></a></li>
+<li><a class="reference internal" href="#scripts.action_client.CancelGoalResponse"><code class="docutils literal notranslate"><span class="pre">CancelGoalResponse</span></code></a><ul>
+<li><a class="reference internal" href="#scripts.action_client.CancelGoalResponse.deserialize"><code class="docutils literal notranslate"><span class="pre">CancelGoalResponse.deserialize()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.action_client.CancelGoalResponse.deserialize_numpy"><code class="docutils literal notranslate"><span class="pre">CancelGoalResponse.deserialize_numpy()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.action_client.CancelGoalResponse.serialize"><code class="docutils literal notranslate"><span class="pre">CancelGoalResponse.serialize()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.action_client.CancelGoalResponse.serialize_numpy"><code class="docutils literal notranslate"><span class="pre">CancelGoalResponse.serialize_numpy()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.action_client.CancelGoalResponse.stat"><code class="docutils literal notranslate"><span class="pre">CancelGoalResponse.stat</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scripts.action_client.GoalStatus"><code class="docutils literal notranslate"><span class="pre">GoalStatus</span></code></a><ul>
+<li><a class="reference internal" href="#scripts.action_client.GoalStatus.ABORTED"><code class="docutils literal notranslate"><span class="pre">GoalStatus.ABORTED</span></code></a></li>
+<li><a class="reference internal" href="#scripts.action_client.GoalStatus.ACTIVE"><code class="docutils literal notranslate"><span class="pre">GoalStatus.ACTIVE</span></code></a></li>
+<li><a class="reference internal" href="#scripts.action_client.GoalStatus.LOST"><code class="docutils literal notranslate"><span class="pre">GoalStatus.LOST</span></code></a></li>
+<li><a class="reference internal" href="#scripts.action_client.GoalStatus.PENDING"><code class="docutils literal notranslate"><span class="pre">GoalStatus.PENDING</span></code></a></li>
+<li><a class="reference internal" href="#scripts.action_client.GoalStatus.PREEMPTED"><code class="docutils literal notranslate"><span class="pre">GoalStatus.PREEMPTED</span></code></a></li>
+<li><a class="reference internal" href="#scripts.action_client.GoalStatus.PREEMPTING"><code class="docutils literal notranslate"><span class="pre">GoalStatus.PREEMPTING</span></code></a></li>
+<li><a class="reference internal" href="#scripts.action_client.GoalStatus.RECALLED"><code class="docutils literal notranslate"><span class="pre">GoalStatus.RECALLED</span></code></a></li>
+<li><a class="reference internal" href="#scripts.action_client.GoalStatus.RECALLING"><code class="docutils literal notranslate"><span class="pre">GoalStatus.RECALLING</span></code></a></li>
+<li><a class="reference internal" href="#scripts.action_client.GoalStatus.REJECTED"><code class="docutils literal notranslate"><span class="pre">GoalStatus.REJECTED</span></code></a></li>
+<li><a class="reference internal" href="#scripts.action_client.GoalStatus.SUCCEEDED"><code class="docutils literal notranslate"><span class="pre">GoalStatus.SUCCEEDED</span></code></a></li>
+<li><a class="reference internal" href="#scripts.action_client.GoalStatus.deserialize"><code class="docutils literal notranslate"><span class="pre">GoalStatus.deserialize()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.action_client.GoalStatus.deserialize_numpy"><code class="docutils literal notranslate"><span class="pre">GoalStatus.deserialize_numpy()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.action_client.GoalStatus.goal_id"><code class="docutils literal notranslate"><span class="pre">GoalStatus.goal_id</span></code></a></li>
+<li><a class="reference internal" href="#scripts.action_client.GoalStatus.serialize"><code class="docutils literal notranslate"><span class="pre">GoalStatus.serialize()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.action_client.GoalStatus.serialize_numpy"><code class="docutils literal notranslate"><span class="pre">GoalStatus.serialize_numpy()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.action_client.GoalStatus.status"><code class="docutils literal notranslate"><span class="pre">GoalStatus.status</span></code></a></li>
+<li><a class="reference internal" href="#scripts.action_client.GoalStatus.text"><code class="docutils literal notranslate"><span class="pre">GoalStatus.text</span></code></a></li>
+<li><a class="reference internal" href="#scripts.action_client.GoalStatus.to_string"><code class="docutils literal notranslate"><span class="pre">GoalStatus.to_string()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scripts.action_client.Odometry"><code class="docutils literal notranslate"><span class="pre">Odometry</span></code></a><ul>
+<li><a class="reference internal" href="#scripts.action_client.Odometry.child_frame_id"><code class="docutils literal notranslate"><span class="pre">Odometry.child_frame_id</span></code></a></li>
+<li><a class="reference internal" href="#scripts.action_client.Odometry.deserialize"><code class="docutils literal notranslate"><span class="pre">Odometry.deserialize()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.action_client.Odometry.deserialize_numpy"><code class="docutils literal notranslate"><span class="pre">Odometry.deserialize_numpy()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.action_client.Odometry.header"><code class="docutils literal notranslate"><span class="pre">Odometry.header</span></code></a></li>
+<li><a class="reference internal" href="#scripts.action_client.Odometry.pose"><code class="docutils literal notranslate"><span class="pre">Odometry.pose</span></code></a></li>
+<li><a class="reference internal" href="#scripts.action_client.Odometry.serialize"><code class="docutils literal notranslate"><span class="pre">Odometry.serialize()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.action_client.Odometry.serialize_numpy"><code class="docutils literal notranslate"><span class="pre">Odometry.serialize_numpy()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.action_client.Odometry.twist"><code class="docutils literal notranslate"><span class="pre">Odometry.twist</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scripts.action_client.Robotinfo"><code class="docutils literal notranslate"><span class="pre">Robotinfo</span></code></a><ul>
+<li><a class="reference internal" href="#scripts.action_client.Robotinfo.deserialize"><code class="docutils literal notranslate"><span class="pre">Robotinfo.deserialize()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.action_client.Robotinfo.deserialize_numpy"><code class="docutils literal notranslate"><span class="pre">Robotinfo.deserialize_numpy()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.action_client.Robotinfo.pos_x"><code class="docutils literal notranslate"><span class="pre">Robotinfo.pos_x</span></code></a></li>
+<li><a class="reference internal" href="#scripts.action_client.Robotinfo.pos_y"><code class="docutils literal notranslate"><span class="pre">Robotinfo.pos_y</span></code></a></li>
+<li><a class="reference internal" href="#scripts.action_client.Robotinfo.serialize"><code class="docutils literal notranslate"><span class="pre">Robotinfo.serialize()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.action_client.Robotinfo.serialize_numpy"><code class="docutils literal notranslate"><span class="pre">Robotinfo.serialize_numpy()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.action_client.Robotinfo.vel_ang_z"><code class="docutils literal notranslate"><span class="pre">Robotinfo.vel_ang_z</span></code></a></li>
+<li><a class="reference internal" href="#scripts.action_client.Robotinfo.vel_x"><code class="docutils literal notranslate"><span class="pre">Robotinfo.vel_x</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scripts.action_client.Robotinfofeet"><code class="docutils literal notranslate"><span class="pre">Robotinfofeet</span></code></a><ul>
+<li><a class="reference internal" href="#scripts.action_client.Robotinfofeet.deserialize"><code class="docutils literal notranslate"><span class="pre">Robotinfofeet.deserialize()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.action_client.Robotinfofeet.deserialize_numpy"><code class="docutils literal notranslate"><span class="pre">Robotinfofeet.deserialize_numpy()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.action_client.Robotinfofeet.feet_x"><code class="docutils literal notranslate"><span class="pre">Robotinfofeet.feet_x</span></code></a></li>
+<li><a class="reference internal" href="#scripts.action_client.Robotinfofeet.feet_y"><code class="docutils literal notranslate"><span class="pre">Robotinfofeet.feet_y</span></code></a></li>
+<li><a class="reference internal" href="#scripts.action_client.Robotinfofeet.serialize"><code class="docutils literal notranslate"><span class="pre">Robotinfofeet.serialize()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.action_client.Robotinfofeet.serialize_numpy"><code class="docutils literal notranslate"><span class="pre">Robotinfofeet.serialize_numpy()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scripts.action_client.action_client"><code class="docutils literal notranslate"><span class="pre">action_client()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.action_client.goal_canceling_service"><code class="docutils literal notranslate"><span class="pre">goal_canceling_service()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.action_client.insertNumber"><code class="docutils literal notranslate"><span class="pre">insertNumber()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.action_client.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.action_client.odom_callback"><code class="docutils literal notranslate"><span class="pre">odom_callback()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#dis-speed-service-module">dis_speed_service Module</a><ul>
+<li><a class="reference internal" href="#scripts.dis_speed_service.GoalStatus"><code class="docutils literal notranslate"><span class="pre">GoalStatus</span></code></a><ul>
+<li><a class="reference internal" href="#scripts.dis_speed_service.GoalStatus.ABORTED"><code class="docutils literal notranslate"><span class="pre">GoalStatus.ABORTED</span></code></a></li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.GoalStatus.ACTIVE"><code class="docutils literal notranslate"><span class="pre">GoalStatus.ACTIVE</span></code></a></li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.GoalStatus.LOST"><code class="docutils literal notranslate"><span class="pre">GoalStatus.LOST</span></code></a></li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.GoalStatus.PENDING"><code class="docutils literal notranslate"><span class="pre">GoalStatus.PENDING</span></code></a></li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.GoalStatus.PREEMPTED"><code class="docutils literal notranslate"><span class="pre">GoalStatus.PREEMPTED</span></code></a></li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.GoalStatus.PREEMPTING"><code class="docutils literal notranslate"><span class="pre">GoalStatus.PREEMPTING</span></code></a></li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.GoalStatus.RECALLED"><code class="docutils literal notranslate"><span class="pre">GoalStatus.RECALLED</span></code></a></li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.GoalStatus.RECALLING"><code class="docutils literal notranslate"><span class="pre">GoalStatus.RECALLING</span></code></a></li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.GoalStatus.REJECTED"><code class="docutils literal notranslate"><span class="pre">GoalStatus.REJECTED</span></code></a></li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.GoalStatus.SUCCEEDED"><code class="docutils literal notranslate"><span class="pre">GoalStatus.SUCCEEDED</span></code></a></li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.GoalStatus.deserialize"><code class="docutils literal notranslate"><span class="pre">GoalStatus.deserialize()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.GoalStatus.deserialize_numpy"><code class="docutils literal notranslate"><span class="pre">GoalStatus.deserialize_numpy()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.GoalStatus.goal_id"><code class="docutils literal notranslate"><span class="pre">GoalStatus.goal_id</span></code></a></li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.GoalStatus.serialize"><code class="docutils literal notranslate"><span class="pre">GoalStatus.serialize()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.GoalStatus.serialize_numpy"><code class="docutils literal notranslate"><span class="pre">GoalStatus.serialize_numpy()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.GoalStatus.status"><code class="docutils literal notranslate"><span class="pre">GoalStatus.status</span></code></a></li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.GoalStatus.text"><code class="docutils literal notranslate"><span class="pre">GoalStatus.text</span></code></a></li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.GoalStatus.to_string"><code class="docutils literal notranslate"><span class="pre">GoalStatus.to_string()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.Odometry"><code class="docutils literal notranslate"><span class="pre">Odometry</span></code></a><ul>
+<li><a class="reference internal" href="#scripts.dis_speed_service.Odometry.child_frame_id"><code class="docutils literal notranslate"><span class="pre">Odometry.child_frame_id</span></code></a></li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.Odometry.deserialize"><code class="docutils literal notranslate"><span class="pre">Odometry.deserialize()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.Odometry.deserialize_numpy"><code class="docutils literal notranslate"><span class="pre">Odometry.deserialize_numpy()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.Odometry.header"><code class="docutils literal notranslate"><span class="pre">Odometry.header</span></code></a></li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.Odometry.pose"><code class="docutils literal notranslate"><span class="pre">Odometry.pose</span></code></a></li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.Odometry.serialize"><code class="docutils literal notranslate"><span class="pre">Odometry.serialize()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.Odometry.serialize_numpy"><code class="docutils literal notranslate"><span class="pre">Odometry.serialize_numpy()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.Odometry.twist"><code class="docutils literal notranslate"><span class="pre">Odometry.twist</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.PlanningActionGoal"><code class="docutils literal notranslate"><span class="pre">PlanningActionGoal</span></code></a><ul>
+<li><a class="reference internal" href="#scripts.dis_speed_service.PlanningActionGoal.deserialize"><code class="docutils literal notranslate"><span class="pre">PlanningActionGoal.deserialize()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.PlanningActionGoal.deserialize_numpy"><code class="docutils literal notranslate"><span class="pre">PlanningActionGoal.deserialize_numpy()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.PlanningActionGoal.goal"><code class="docutils literal notranslate"><span class="pre">PlanningActionGoal.goal</span></code></a></li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.PlanningActionGoal.goal_id"><code class="docutils literal notranslate"><span class="pre">PlanningActionGoal.goal_id</span></code></a></li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.PlanningActionGoal.header"><code class="docutils literal notranslate"><span class="pre">PlanningActionGoal.header</span></code></a></li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.PlanningActionGoal.serialize"><code class="docutils literal notranslate"><span class="pre">PlanningActionGoal.serialize()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.PlanningActionGoal.serialize_numpy"><code class="docutils literal notranslate"><span class="pre">PlanningActionGoal.serialize_numpy()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.Robotinfo"><code class="docutils literal notranslate"><span class="pre">Robotinfo</span></code></a><ul>
+<li><a class="reference internal" href="#scripts.dis_speed_service.Robotinfo.deserialize"><code class="docutils literal notranslate"><span class="pre">Robotinfo.deserialize()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.Robotinfo.deserialize_numpy"><code class="docutils literal notranslate"><span class="pre">Robotinfo.deserialize_numpy()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.Robotinfo.pos_x"><code class="docutils literal notranslate"><span class="pre">Robotinfo.pos_x</span></code></a></li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.Robotinfo.pos_y"><code class="docutils literal notranslate"><span class="pre">Robotinfo.pos_y</span></code></a></li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.Robotinfo.serialize"><code class="docutils literal notranslate"><span class="pre">Robotinfo.serialize()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.Robotinfo.serialize_numpy"><code class="docutils literal notranslate"><span class="pre">Robotinfo.serialize_numpy()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.Robotinfo.vel_ang_z"><code class="docutils literal notranslate"><span class="pre">Robotinfo.vel_ang_z</span></code></a></li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.Robotinfo.vel_x"><code class="docutils literal notranslate"><span class="pre">Robotinfo.vel_x</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.SpeedDistance"><code class="docutils literal notranslate"><span class="pre">SpeedDistance</span></code></a></li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.SpeedDistanceResponse"><code class="docutils literal notranslate"><span class="pre">SpeedDistanceResponse</span></code></a><ul>
+<li><a class="reference internal" href="#scripts.dis_speed_service.SpeedDistanceResponse.avg_speed_x"><code class="docutils literal notranslate"><span class="pre">SpeedDistanceResponse.avg_speed_x</span></code></a></li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.SpeedDistanceResponse.avgspeed_ang_z"><code class="docutils literal notranslate"><span class="pre">SpeedDistanceResponse.avgspeed_ang_z</span></code></a></li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.SpeedDistanceResponse.deserialize"><code class="docutils literal notranslate"><span class="pre">SpeedDistanceResponse.deserialize()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.SpeedDistanceResponse.deserialize_numpy"><code class="docutils literal notranslate"><span class="pre">SpeedDistanceResponse.deserialize_numpy()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.SpeedDistanceResponse.distance_target"><code class="docutils literal notranslate"><span class="pre">SpeedDistanceResponse.distance_target</span></code></a></li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.SpeedDistanceResponse.serialize"><code class="docutils literal notranslate"><span class="pre">SpeedDistanceResponse.serialize()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.SpeedDistanceResponse.serialize_numpy"><code class="docutils literal notranslate"><span class="pre">SpeedDistanceResponse.serialize_numpy()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.dis_speed_service"><code class="docutils literal notranslate"><span class="pre">dis_speed_service()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.dis_speed_service_callback"><code class="docutils literal notranslate"><span class="pre">dis_speed_service_callback()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.info_callback"><code class="docutils literal notranslate"><span class="pre">info_callback()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.list_update"><code class="docutils literal notranslate"><span class="pre">list_update()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.dis_speed_service.target_sub_callback"><code class="docutils literal notranslate"><span class="pre">target_sub_callback()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#last-tar-service-module">last_tar_service Module</a><ul>
+<li><a class="reference internal" href="#scripts.last_tar_service.LastTarget"><code class="docutils literal notranslate"><span class="pre">LastTarget</span></code></a></li>
+<li><a class="reference internal" href="#scripts.last_tar_service.LastTargetResponse"><code class="docutils literal notranslate"><span class="pre">LastTargetResponse</span></code></a><ul>
+<li><a class="reference internal" href="#scripts.last_tar_service.LastTargetResponse.deserialize"><code class="docutils literal notranslate"><span class="pre">LastTargetResponse.deserialize()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.last_tar_service.LastTargetResponse.deserialize_numpy"><code class="docutils literal notranslate"><span class="pre">LastTargetResponse.deserialize_numpy()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.last_tar_service.LastTargetResponse.serialize"><code class="docutils literal notranslate"><span class="pre">LastTargetResponse.serialize()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.last_tar_service.LastTargetResponse.serialize_numpy"><code class="docutils literal notranslate"><span class="pre">LastTargetResponse.serialize_numpy()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.last_tar_service.LastTargetResponse.tar_pose_x"><code class="docutils literal notranslate"><span class="pre">LastTargetResponse.tar_pose_x</span></code></a></li>
+<li><a class="reference internal" href="#scripts.last_tar_service.LastTargetResponse.tar_pose_y"><code class="docutils literal notranslate"><span class="pre">LastTargetResponse.tar_pose_y</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scripts.last_tar_service.PlanningActionGoal"><code class="docutils literal notranslate"><span class="pre">PlanningActionGoal</span></code></a><ul>
+<li><a class="reference internal" href="#scripts.last_tar_service.PlanningActionGoal.deserialize"><code class="docutils literal notranslate"><span class="pre">PlanningActionGoal.deserialize()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.last_tar_service.PlanningActionGoal.deserialize_numpy"><code class="docutils literal notranslate"><span class="pre">PlanningActionGoal.deserialize_numpy()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.last_tar_service.PlanningActionGoal.goal"><code class="docutils literal notranslate"><span class="pre">PlanningActionGoal.goal</span></code></a></li>
+<li><a class="reference internal" href="#scripts.last_tar_service.PlanningActionGoal.goal_id"><code class="docutils literal notranslate"><span class="pre">PlanningActionGoal.goal_id</span></code></a></li>
+<li><a class="reference internal" href="#scripts.last_tar_service.PlanningActionGoal.header"><code class="docutils literal notranslate"><span class="pre">PlanningActionGoal.header</span></code></a></li>
+<li><a class="reference internal" href="#scripts.last_tar_service.PlanningActionGoal.serialize"><code class="docutils literal notranslate"><span class="pre">PlanningActionGoal.serialize()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.last_tar_service.PlanningActionGoal.serialize_numpy"><code class="docutils literal notranslate"><span class="pre">PlanningActionGoal.serialize_numpy()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scripts.last_tar_service.last_tar_service"><code class="docutils literal notranslate"><span class="pre">last_tar_service()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.last_tar_service.target_service_callback"><code class="docutils literal notranslate"><span class="pre">target_service_callback()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.last_tar_service.target_sub_callback"><code class="docutils literal notranslate"><span class="pre">target_sub_callback()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
 
-          <div class="body" role="main">
-            
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">ros_rt1</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Welcome to ros_rt1’s documentation!</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
   <section id="welcome-to-ros-rt1-s-documentation">
-<h1>Welcome to ros_rt1’s documentation!<a class="headerlink" href="#welcome-to-ros-rt1-s-documentation" title="Link to this heading">¶</a></h1>
+<h1>Welcome to ros_rt1’s documentation!<a class="headerlink" href="#welcome-to-ros-rt1-s-documentation" title="Link to this heading"></a></h1>
 <div class="toctree-wrapper compound">
 </div>
 </section>
 <section id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Link to this heading">¶</a></h1>
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Link to this heading"></a></h1>
 <ul class="simple">
 <li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
 <li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
 <li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
 </ul>
 <section id="ros-rt1-documentation">
-<h2>ros_rt1 documentation!<a class="headerlink" href="#ros-rt1-documentation" title="Link to this heading">¶</a></h2>
+<h2>ros_rt1 documentation!<a class="headerlink" href="#ros-rt1-documentation" title="Link to this heading"></a></h2>
 <p>This is the documentation of the ros_rt1 package!</p>
 </section>
 </section>
 <section id="module-scripts.action_client">
-<span id="action-client-module"></span><h1>action_client Module<a class="headerlink" href="#module-scripts.action_client" title="Link to this heading">¶</a></h1>
+<span id="action-client-module"></span><h1>action_client Module<a class="headerlink" href="#module-scripts.action_client" title="Link to this heading"></a></h1>
 <p id="module-action_client">This module is the action client for the assignment 2 of the course 2023.
 It is used to send the goal to the action server and to cancel the goal if needed.
 It also publishes the position and velocity of the robot.</p>
@@ -65,24 +278,24 @@ It also publishes the position and velocity of the robot.</p>
 </dl>
 <dl class="py class">
 <dt class="sig sig-object py" id="scripts.action_client.CancelGoal">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.action_client.</span></span><span class="sig-name descname"><span class="pre">CancelGoal</span></span><a class="reference internal" href="_modules/assignment_2_2023/srv/_CancelGoal.html#CancelGoal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.CancelGoal" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.action_client.</span></span><span class="sig-name descname"><span class="pre">CancelGoal</span></span><a class="reference internal" href="_modules/assignment_2_2023/srv/_CancelGoal.html#CancelGoal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.CancelGoal" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="scripts.action_client.CancelGoalResponse">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.action_client.</span></span><span class="sig-name descname"><span class="pre">CancelGoalResponse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/srv/_CancelGoal.html#CancelGoalResponse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.CancelGoalResponse" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.action_client.</span></span><span class="sig-name descname"><span class="pre">CancelGoalResponse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/srv/_CancelGoal.html#CancelGoalResponse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.CancelGoalResponse" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.action_client.CancelGoalResponse.deserialize">
-<span class="sig-name descname"><span class="pre">deserialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/srv/_CancelGoal.html#CancelGoalResponse.deserialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.CancelGoalResponse.deserialize" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">deserialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/srv/_CancelGoal.html#CancelGoalResponse.deserialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.CancelGoalResponse.deserialize" title="Link to this definition"></a></dt>
 <dd><p>unpack serialized message in str into this message instance
 :param str: byte array of serialized message, <code class="docutils literal notranslate"><span class="pre">str</span></code></p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.action_client.CancelGoalResponse.deserialize_numpy">
-<span class="sig-name descname"><span class="pre">deserialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/srv/_CancelGoal.html#CancelGoalResponse.deserialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.CancelGoalResponse.deserialize_numpy" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">deserialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/srv/_CancelGoal.html#CancelGoalResponse.deserialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.CancelGoalResponse.deserialize_numpy" title="Link to this definition"></a></dt>
 <dd><p>unpack serialized message in str into this message instance using numpy for array types
 :param str: byte array of serialized message, <code class="docutils literal notranslate"><span class="pre">str</span></code>
 :param numpy: numpy python module</p>
@@ -90,14 +303,14 @@ It also publishes the position and velocity of the robot.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.action_client.CancelGoalResponse.serialize">
-<span class="sig-name descname"><span class="pre">serialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/srv/_CancelGoal.html#CancelGoalResponse.serialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.CancelGoalResponse.serialize" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">serialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/srv/_CancelGoal.html#CancelGoalResponse.serialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.CancelGoalResponse.serialize" title="Link to this definition"></a></dt>
 <dd><p>serialize message into buffer
 :param buff: buffer, <code class="docutils literal notranslate"><span class="pre">StringIO</span></code></p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.action_client.CancelGoalResponse.serialize_numpy">
-<span class="sig-name descname"><span class="pre">serialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/srv/_CancelGoal.html#CancelGoalResponse.serialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.CancelGoalResponse.serialize_numpy" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">serialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/srv/_CancelGoal.html#CancelGoalResponse.serialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.CancelGoalResponse.serialize_numpy" title="Link to this definition"></a></dt>
 <dd><p>serialize message with numpy array types into buffer
 :param buff: buffer, <code class="docutils literal notranslate"><span class="pre">StringIO</span></code>
 :param numpy: numpy python module</p>
@@ -105,75 +318,75 @@ It also publishes the position and velocity of the robot.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.action_client.CancelGoalResponse.stat">
-<span class="sig-name descname"><span class="pre">stat</span></span><a class="headerlink" href="#scripts.action_client.CancelGoalResponse.stat" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">stat</span></span><a class="headerlink" href="#scripts.action_client.CancelGoalResponse.stat" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="scripts.action_client.GoalStatus">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.action_client.</span></span><span class="sig-name descname"><span class="pre">GoalStatus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/actionlib_msgs/msg/_GoalStatus.html#GoalStatus"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.GoalStatus" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.action_client.</span></span><span class="sig-name descname"><span class="pre">GoalStatus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/actionlib_msgs/msg/_GoalStatus.html#GoalStatus"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.GoalStatus" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.action_client.GoalStatus.ABORTED">
-<span class="sig-name descname"><span class="pre">ABORTED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#scripts.action_client.GoalStatus.ABORTED" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ABORTED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#scripts.action_client.GoalStatus.ABORTED" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.action_client.GoalStatus.ACTIVE">
-<span class="sig-name descname"><span class="pre">ACTIVE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#scripts.action_client.GoalStatus.ACTIVE" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ACTIVE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#scripts.action_client.GoalStatus.ACTIVE" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.action_client.GoalStatus.LOST">
-<span class="sig-name descname"><span class="pre">LOST</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">9</span></em><a class="headerlink" href="#scripts.action_client.GoalStatus.LOST" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">LOST</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">9</span></em><a class="headerlink" href="#scripts.action_client.GoalStatus.LOST" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.action_client.GoalStatus.PENDING">
-<span class="sig-name descname"><span class="pre">PENDING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#scripts.action_client.GoalStatus.PENDING" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">PENDING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#scripts.action_client.GoalStatus.PENDING" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.action_client.GoalStatus.PREEMPTED">
-<span class="sig-name descname"><span class="pre">PREEMPTED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#scripts.action_client.GoalStatus.PREEMPTED" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">PREEMPTED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#scripts.action_client.GoalStatus.PREEMPTED" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.action_client.GoalStatus.PREEMPTING">
-<span class="sig-name descname"><span class="pre">PREEMPTING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6</span></em><a class="headerlink" href="#scripts.action_client.GoalStatus.PREEMPTING" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">PREEMPTING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6</span></em><a class="headerlink" href="#scripts.action_client.GoalStatus.PREEMPTING" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.action_client.GoalStatus.RECALLED">
-<span class="sig-name descname"><span class="pre">RECALLED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">8</span></em><a class="headerlink" href="#scripts.action_client.GoalStatus.RECALLED" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">RECALLED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">8</span></em><a class="headerlink" href="#scripts.action_client.GoalStatus.RECALLED" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.action_client.GoalStatus.RECALLING">
-<span class="sig-name descname"><span class="pre">RECALLING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">7</span></em><a class="headerlink" href="#scripts.action_client.GoalStatus.RECALLING" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">RECALLING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">7</span></em><a class="headerlink" href="#scripts.action_client.GoalStatus.RECALLING" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.action_client.GoalStatus.REJECTED">
-<span class="sig-name descname"><span class="pre">REJECTED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#scripts.action_client.GoalStatus.REJECTED" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">REJECTED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#scripts.action_client.GoalStatus.REJECTED" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.action_client.GoalStatus.SUCCEEDED">
-<span class="sig-name descname"><span class="pre">SUCCEEDED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#scripts.action_client.GoalStatus.SUCCEEDED" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">SUCCEEDED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#scripts.action_client.GoalStatus.SUCCEEDED" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.action_client.GoalStatus.deserialize">
-<span class="sig-name descname"><span class="pre">deserialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/actionlib_msgs/msg/_GoalStatus.html#GoalStatus.deserialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.GoalStatus.deserialize" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">deserialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/actionlib_msgs/msg/_GoalStatus.html#GoalStatus.deserialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.GoalStatus.deserialize" title="Link to this definition"></a></dt>
 <dd><p>unpack serialized message in str into this message instance
 :param str: byte array of serialized message, <code class="docutils literal notranslate"><span class="pre">str</span></code></p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.action_client.GoalStatus.deserialize_numpy">
-<span class="sig-name descname"><span class="pre">deserialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/actionlib_msgs/msg/_GoalStatus.html#GoalStatus.deserialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.GoalStatus.deserialize_numpy" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">deserialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/actionlib_msgs/msg/_GoalStatus.html#GoalStatus.deserialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.GoalStatus.deserialize_numpy" title="Link to this definition"></a></dt>
 <dd><p>unpack serialized message in str into this message instance using numpy for array types
 :param str: byte array of serialized message, <code class="docutils literal notranslate"><span class="pre">str</span></code>
 :param numpy: numpy python module</p>
@@ -181,19 +394,19 @@ It also publishes the position and velocity of the robot.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.action_client.GoalStatus.goal_id">
-<span class="sig-name descname"><span class="pre">goal_id</span></span><a class="headerlink" href="#scripts.action_client.GoalStatus.goal_id" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">goal_id</span></span><a class="headerlink" href="#scripts.action_client.GoalStatus.goal_id" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.action_client.GoalStatus.serialize">
-<span class="sig-name descname"><span class="pre">serialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/actionlib_msgs/msg/_GoalStatus.html#GoalStatus.serialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.GoalStatus.serialize" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">serialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/actionlib_msgs/msg/_GoalStatus.html#GoalStatus.serialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.GoalStatus.serialize" title="Link to this definition"></a></dt>
 <dd><p>serialize message into buffer
 :param buff: buffer, <code class="docutils literal notranslate"><span class="pre">StringIO</span></code></p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.action_client.GoalStatus.serialize_numpy">
-<span class="sig-name descname"><span class="pre">serialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/actionlib_msgs/msg/_GoalStatus.html#GoalStatus.serialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.GoalStatus.serialize_numpy" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">serialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/actionlib_msgs/msg/_GoalStatus.html#GoalStatus.serialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.GoalStatus.serialize_numpy" title="Link to this definition"></a></dt>
 <dd><p>serialize message with numpy array types into buffer
 :param buff: buffer, <code class="docutils literal notranslate"><span class="pre">StringIO</span></code>
 :param numpy: numpy python module</p>
@@ -201,40 +414,40 @@ It also publishes the position and velocity of the robot.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.action_client.GoalStatus.status">
-<span class="sig-name descname"><span class="pre">status</span></span><a class="headerlink" href="#scripts.action_client.GoalStatus.status" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">status</span></span><a class="headerlink" href="#scripts.action_client.GoalStatus.status" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.action_client.GoalStatus.text">
-<span class="sig-name descname"><span class="pre">text</span></span><a class="headerlink" href="#scripts.action_client.GoalStatus.text" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">text</span></span><a class="headerlink" href="#scripts.action_client.GoalStatus.text" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.action_client.GoalStatus.to_string">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">to_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#scripts.action_client.GoalStatus.to_string" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">to_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#scripts.action_client.GoalStatus.to_string" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="scripts.action_client.Odometry">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.action_client.</span></span><span class="sig-name descname"><span class="pre">Odometry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nav_msgs/msg/_Odometry.html#Odometry"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.Odometry" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.action_client.</span></span><span class="sig-name descname"><span class="pre">Odometry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nav_msgs/msg/_Odometry.html#Odometry"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.Odometry" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.action_client.Odometry.child_frame_id">
-<span class="sig-name descname"><span class="pre">child_frame_id</span></span><a class="headerlink" href="#scripts.action_client.Odometry.child_frame_id" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">child_frame_id</span></span><a class="headerlink" href="#scripts.action_client.Odometry.child_frame_id" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.action_client.Odometry.deserialize">
-<span class="sig-name descname"><span class="pre">deserialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nav_msgs/msg/_Odometry.html#Odometry.deserialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.Odometry.deserialize" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">deserialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nav_msgs/msg/_Odometry.html#Odometry.deserialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.Odometry.deserialize" title="Link to this definition"></a></dt>
 <dd><p>unpack serialized message in str into this message instance
 :param str: byte array of serialized message, <code class="docutils literal notranslate"><span class="pre">str</span></code></p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.action_client.Odometry.deserialize_numpy">
-<span class="sig-name descname"><span class="pre">deserialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nav_msgs/msg/_Odometry.html#Odometry.deserialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.Odometry.deserialize_numpy" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">deserialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nav_msgs/msg/_Odometry.html#Odometry.deserialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.Odometry.deserialize_numpy" title="Link to this definition"></a></dt>
 <dd><p>unpack serialized message in str into this message instance using numpy for array types
 :param str: byte array of serialized message, <code class="docutils literal notranslate"><span class="pre">str</span></code>
 :param numpy: numpy python module</p>
@@ -242,24 +455,24 @@ It also publishes the position and velocity of the robot.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.action_client.Odometry.header">
-<span class="sig-name descname"><span class="pre">header</span></span><a class="headerlink" href="#scripts.action_client.Odometry.header" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">header</span></span><a class="headerlink" href="#scripts.action_client.Odometry.header" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.action_client.Odometry.pose">
-<span class="sig-name descname"><span class="pre">pose</span></span><a class="headerlink" href="#scripts.action_client.Odometry.pose" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">pose</span></span><a class="headerlink" href="#scripts.action_client.Odometry.pose" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.action_client.Odometry.serialize">
-<span class="sig-name descname"><span class="pre">serialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nav_msgs/msg/_Odometry.html#Odometry.serialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.Odometry.serialize" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">serialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nav_msgs/msg/_Odometry.html#Odometry.serialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.Odometry.serialize" title="Link to this definition"></a></dt>
 <dd><p>serialize message into buffer
 :param buff: buffer, <code class="docutils literal notranslate"><span class="pre">StringIO</span></code></p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.action_client.Odometry.serialize_numpy">
-<span class="sig-name descname"><span class="pre">serialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nav_msgs/msg/_Odometry.html#Odometry.serialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.Odometry.serialize_numpy" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">serialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nav_msgs/msg/_Odometry.html#Odometry.serialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.Odometry.serialize_numpy" title="Link to this definition"></a></dt>
 <dd><p>serialize message with numpy array types into buffer
 :param buff: buffer, <code class="docutils literal notranslate"><span class="pre">StringIO</span></code>
 :param numpy: numpy python module</p>
@@ -267,25 +480,25 @@ It also publishes the position and velocity of the robot.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.action_client.Odometry.twist">
-<span class="sig-name descname"><span class="pre">twist</span></span><a class="headerlink" href="#scripts.action_client.Odometry.twist" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">twist</span></span><a class="headerlink" href="#scripts.action_client.Odometry.twist" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="scripts.action_client.Robotinfo">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.action_client.</span></span><span class="sig-name descname"><span class="pre">Robotinfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_Robotinfo.html#Robotinfo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.Robotinfo" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.action_client.</span></span><span class="sig-name descname"><span class="pre">Robotinfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_Robotinfo.html#Robotinfo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.Robotinfo" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.action_client.Robotinfo.deserialize">
-<span class="sig-name descname"><span class="pre">deserialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_Robotinfo.html#Robotinfo.deserialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.Robotinfo.deserialize" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">deserialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_Robotinfo.html#Robotinfo.deserialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.Robotinfo.deserialize" title="Link to this definition"></a></dt>
 <dd><p>unpack serialized message in str into this message instance
 :param str: byte array of serialized message, <code class="docutils literal notranslate"><span class="pre">str</span></code></p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.action_client.Robotinfo.deserialize_numpy">
-<span class="sig-name descname"><span class="pre">deserialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_Robotinfo.html#Robotinfo.deserialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.Robotinfo.deserialize_numpy" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">deserialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_Robotinfo.html#Robotinfo.deserialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.Robotinfo.deserialize_numpy" title="Link to this definition"></a></dt>
 <dd><p>unpack serialized message in str into this message instance using numpy for array types
 :param str: byte array of serialized message, <code class="docutils literal notranslate"><span class="pre">str</span></code>
 :param numpy: numpy python module</p>
@@ -293,24 +506,24 @@ It also publishes the position and velocity of the robot.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.action_client.Robotinfo.pos_x">
-<span class="sig-name descname"><span class="pre">pos_x</span></span><a class="headerlink" href="#scripts.action_client.Robotinfo.pos_x" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">pos_x</span></span><a class="headerlink" href="#scripts.action_client.Robotinfo.pos_x" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.action_client.Robotinfo.pos_y">
-<span class="sig-name descname"><span class="pre">pos_y</span></span><a class="headerlink" href="#scripts.action_client.Robotinfo.pos_y" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">pos_y</span></span><a class="headerlink" href="#scripts.action_client.Robotinfo.pos_y" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.action_client.Robotinfo.serialize">
-<span class="sig-name descname"><span class="pre">serialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_Robotinfo.html#Robotinfo.serialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.Robotinfo.serialize" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">serialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_Robotinfo.html#Robotinfo.serialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.Robotinfo.serialize" title="Link to this definition"></a></dt>
 <dd><p>serialize message into buffer
 :param buff: buffer, <code class="docutils literal notranslate"><span class="pre">StringIO</span></code></p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.action_client.Robotinfo.serialize_numpy">
-<span class="sig-name descname"><span class="pre">serialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_Robotinfo.html#Robotinfo.serialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.Robotinfo.serialize_numpy" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">serialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_Robotinfo.html#Robotinfo.serialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.Robotinfo.serialize_numpy" title="Link to this definition"></a></dt>
 <dd><p>serialize message with numpy array types into buffer
 :param buff: buffer, <code class="docutils literal notranslate"><span class="pre">StringIO</span></code>
 :param numpy: numpy python module</p>
@@ -318,30 +531,30 @@ It also publishes the position and velocity of the robot.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.action_client.Robotinfo.vel_ang_z">
-<span class="sig-name descname"><span class="pre">vel_ang_z</span></span><a class="headerlink" href="#scripts.action_client.Robotinfo.vel_ang_z" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">vel_ang_z</span></span><a class="headerlink" href="#scripts.action_client.Robotinfo.vel_ang_z" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.action_client.Robotinfo.vel_x">
-<span class="sig-name descname"><span class="pre">vel_x</span></span><a class="headerlink" href="#scripts.action_client.Robotinfo.vel_x" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">vel_x</span></span><a class="headerlink" href="#scripts.action_client.Robotinfo.vel_x" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="scripts.action_client.Robotinfofeet">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.action_client.</span></span><span class="sig-name descname"><span class="pre">Robotinfofeet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_Robotinfofeet.html#Robotinfofeet"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.Robotinfofeet" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.action_client.</span></span><span class="sig-name descname"><span class="pre">Robotinfofeet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_Robotinfofeet.html#Robotinfofeet"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.Robotinfofeet" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.action_client.Robotinfofeet.deserialize">
-<span class="sig-name descname"><span class="pre">deserialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_Robotinfofeet.html#Robotinfofeet.deserialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.Robotinfofeet.deserialize" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">deserialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_Robotinfofeet.html#Robotinfofeet.deserialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.Robotinfofeet.deserialize" title="Link to this definition"></a></dt>
 <dd><p>unpack serialized message in str into this message instance
 :param str: byte array of serialized message, <code class="docutils literal notranslate"><span class="pre">str</span></code></p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.action_client.Robotinfofeet.deserialize_numpy">
-<span class="sig-name descname"><span class="pre">deserialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_Robotinfofeet.html#Robotinfofeet.deserialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.Robotinfofeet.deserialize_numpy" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">deserialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_Robotinfofeet.html#Robotinfofeet.deserialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.Robotinfofeet.deserialize_numpy" title="Link to this definition"></a></dt>
 <dd><p>unpack serialized message in str into this message instance using numpy for array types
 :param str: byte array of serialized message, <code class="docutils literal notranslate"><span class="pre">str</span></code>
 :param numpy: numpy python module</p>
@@ -349,24 +562,24 @@ It also publishes the position and velocity of the robot.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.action_client.Robotinfofeet.feet_x">
-<span class="sig-name descname"><span class="pre">feet_x</span></span><a class="headerlink" href="#scripts.action_client.Robotinfofeet.feet_x" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">feet_x</span></span><a class="headerlink" href="#scripts.action_client.Robotinfofeet.feet_x" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.action_client.Robotinfofeet.feet_y">
-<span class="sig-name descname"><span class="pre">feet_y</span></span><a class="headerlink" href="#scripts.action_client.Robotinfofeet.feet_y" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">feet_y</span></span><a class="headerlink" href="#scripts.action_client.Robotinfofeet.feet_y" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.action_client.Robotinfofeet.serialize">
-<span class="sig-name descname"><span class="pre">serialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_Robotinfofeet.html#Robotinfofeet.serialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.Robotinfofeet.serialize" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">serialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_Robotinfofeet.html#Robotinfofeet.serialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.Robotinfofeet.serialize" title="Link to this definition"></a></dt>
 <dd><p>serialize message into buffer
 :param buff: buffer, <code class="docutils literal notranslate"><span class="pre">StringIO</span></code></p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.action_client.Robotinfofeet.serialize_numpy">
-<span class="sig-name descname"><span class="pre">serialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_Robotinfofeet.html#Robotinfofeet.serialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.Robotinfofeet.serialize_numpy" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">serialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_Robotinfofeet.html#Robotinfofeet.serialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.Robotinfofeet.serialize_numpy" title="Link to this definition"></a></dt>
 <dd><p>serialize message with numpy array types into buffer
 :param buff: buffer, <code class="docutils literal notranslate"><span class="pre">StringIO</span></code>
 :param numpy: numpy python module</p>
@@ -376,13 +589,13 @@ It also publishes the position and velocity of the robot.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="scripts.action_client.action_client">
-<span class="sig-prename descclassname"><span class="pre">scripts.action_client.</span></span><span class="sig-name descname"><span class="pre">action_client</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/action_client.html#action_client"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.action_client" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">scripts.action_client.</span></span><span class="sig-name descname"><span class="pre">action_client</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/action_client.html#action_client"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.action_client" title="Link to this definition"></a></dt>
 <dd><p>Function to implement the action client</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="scripts.action_client.goal_canceling_service">
-<span class="sig-prename descclassname"><span class="pre">scripts.action_client.</span></span><span class="sig-name descname"><span class="pre">goal_canceling_service</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">req</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/action_client.html#goal_canceling_service"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.goal_canceling_service" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">scripts.action_client.</span></span><span class="sig-name descname"><span class="pre">goal_canceling_service</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">req</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/action_client.html#goal_canceling_service"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.goal_canceling_service" title="Link to this definition"></a></dt>
 <dd><p>Service to cancel the goal</p>
 <p>Args:
 req (CancelGoal): request to cancel the goal</p>
@@ -390,7 +603,7 @@ req (CancelGoal): request to cancel the goal</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="scripts.action_client.insertNumber">
-<span class="sig-prename descclassname"><span class="pre">scripts.action_client.</span></span><span class="sig-name descname"><span class="pre">insertNumber</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/action_client.html#insertNumber"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.insertNumber" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">scripts.action_client.</span></span><span class="sig-name descname"><span class="pre">insertNumber</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/action_client.html#insertNumber"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.insertNumber" title="Link to this definition"></a></dt>
 <dd><p>Function to take the input from the user to know the coordinates of the goal</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -405,14 +618,14 @@ req (CancelGoal): request to cancel the goal</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="scripts.action_client.main">
-<span class="sig-prename descclassname"><span class="pre">scripts.action_client.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/action_client.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.main" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">scripts.action_client.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/action_client.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.main" title="Link to this definition"></a></dt>
 <dd><p>This function initializes the nodes and calls the action client function.
 This also initializes the publisher and subscriber for the robot information, the service for the goal canceling and the action to reach the goal.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="scripts.action_client.odom_callback">
-<span class="sig-prename descclassname"><span class="pre">scripts.action_client.</span></span><span class="sig-name descname"><span class="pre">odom_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/action_client.html#odom_callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.odom_callback" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">scripts.action_client.</span></span><span class="sig-name descname"><span class="pre">odom_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/action_client.html#odom_callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.odom_callback" title="Link to this definition"></a></dt>
 <dd><p>Callback function for the subscriber of the odometry</p>
 <p>Args:
 msg (Odometry): message from the subscriber for the odometry</p>
@@ -420,7 +633,7 @@ msg (Odometry): message from the subscriber for the odometry</p>
 
 </section>
 <section id="dis-speed-service-module">
-<h1>dis_speed_service Module<a class="headerlink" href="#dis-speed-service-module" title="Link to this heading">¶</a></h1>
+<h1>dis_speed_service Module<a class="headerlink" href="#dis-speed-service-module" title="Link to this heading"></a></h1>
 <p id="module-dis_speed_service"><span id="module-scripts.dis_speed_service"></span>This module is the service server for the assignment 2 of the course 2023.
 It is used to calculate the distance from the target and the average speed of the robot.
 It also subscribes to the robot info and to the goal to calculate the distance and the speed.</p>
@@ -437,68 +650,68 @@ It also subscribes to the robot info and to the goal to calculate the distance a
 </dl>
 <dl class="py class">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.GoalStatus">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.dis_speed_service.</span></span><span class="sig-name descname"><span class="pre">GoalStatus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/actionlib_msgs/msg/_GoalStatus.html#GoalStatus"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.GoalStatus" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.dis_speed_service.</span></span><span class="sig-name descname"><span class="pre">GoalStatus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/actionlib_msgs/msg/_GoalStatus.html#GoalStatus"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.GoalStatus" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.GoalStatus.ABORTED">
-<span class="sig-name descname"><span class="pre">ABORTED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#scripts.dis_speed_service.GoalStatus.ABORTED" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ABORTED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#scripts.dis_speed_service.GoalStatus.ABORTED" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.GoalStatus.ACTIVE">
-<span class="sig-name descname"><span class="pre">ACTIVE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#scripts.dis_speed_service.GoalStatus.ACTIVE" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ACTIVE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#scripts.dis_speed_service.GoalStatus.ACTIVE" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.GoalStatus.LOST">
-<span class="sig-name descname"><span class="pre">LOST</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">9</span></em><a class="headerlink" href="#scripts.dis_speed_service.GoalStatus.LOST" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">LOST</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">9</span></em><a class="headerlink" href="#scripts.dis_speed_service.GoalStatus.LOST" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.GoalStatus.PENDING">
-<span class="sig-name descname"><span class="pre">PENDING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#scripts.dis_speed_service.GoalStatus.PENDING" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">PENDING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#scripts.dis_speed_service.GoalStatus.PENDING" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.GoalStatus.PREEMPTED">
-<span class="sig-name descname"><span class="pre">PREEMPTED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#scripts.dis_speed_service.GoalStatus.PREEMPTED" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">PREEMPTED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#scripts.dis_speed_service.GoalStatus.PREEMPTED" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.GoalStatus.PREEMPTING">
-<span class="sig-name descname"><span class="pre">PREEMPTING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6</span></em><a class="headerlink" href="#scripts.dis_speed_service.GoalStatus.PREEMPTING" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">PREEMPTING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6</span></em><a class="headerlink" href="#scripts.dis_speed_service.GoalStatus.PREEMPTING" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.GoalStatus.RECALLED">
-<span class="sig-name descname"><span class="pre">RECALLED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">8</span></em><a class="headerlink" href="#scripts.dis_speed_service.GoalStatus.RECALLED" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">RECALLED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">8</span></em><a class="headerlink" href="#scripts.dis_speed_service.GoalStatus.RECALLED" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.GoalStatus.RECALLING">
-<span class="sig-name descname"><span class="pre">RECALLING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">7</span></em><a class="headerlink" href="#scripts.dis_speed_service.GoalStatus.RECALLING" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">RECALLING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">7</span></em><a class="headerlink" href="#scripts.dis_speed_service.GoalStatus.RECALLING" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.GoalStatus.REJECTED">
-<span class="sig-name descname"><span class="pre">REJECTED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#scripts.dis_speed_service.GoalStatus.REJECTED" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">REJECTED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#scripts.dis_speed_service.GoalStatus.REJECTED" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.GoalStatus.SUCCEEDED">
-<span class="sig-name descname"><span class="pre">SUCCEEDED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#scripts.dis_speed_service.GoalStatus.SUCCEEDED" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">SUCCEEDED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#scripts.dis_speed_service.GoalStatus.SUCCEEDED" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.GoalStatus.deserialize">
-<span class="sig-name descname"><span class="pre">deserialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/actionlib_msgs/msg/_GoalStatus.html#GoalStatus.deserialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.GoalStatus.deserialize" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">deserialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/actionlib_msgs/msg/_GoalStatus.html#GoalStatus.deserialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.GoalStatus.deserialize" title="Link to this definition"></a></dt>
 <dd><p>unpack serialized message in str into this message instance
 :param str: byte array of serialized message, <code class="docutils literal notranslate"><span class="pre">str</span></code></p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.GoalStatus.deserialize_numpy">
-<span class="sig-name descname"><span class="pre">deserialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/actionlib_msgs/msg/_GoalStatus.html#GoalStatus.deserialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.GoalStatus.deserialize_numpy" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">deserialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/actionlib_msgs/msg/_GoalStatus.html#GoalStatus.deserialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.GoalStatus.deserialize_numpy" title="Link to this definition"></a></dt>
 <dd><p>unpack serialized message in str into this message instance using numpy for array types
 :param str: byte array of serialized message, <code class="docutils literal notranslate"><span class="pre">str</span></code>
 :param numpy: numpy python module</p>
@@ -506,19 +719,19 @@ It also subscribes to the robot info and to the goal to calculate the distance a
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.GoalStatus.goal_id">
-<span class="sig-name descname"><span class="pre">goal_id</span></span><a class="headerlink" href="#scripts.dis_speed_service.GoalStatus.goal_id" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">goal_id</span></span><a class="headerlink" href="#scripts.dis_speed_service.GoalStatus.goal_id" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.GoalStatus.serialize">
-<span class="sig-name descname"><span class="pre">serialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/actionlib_msgs/msg/_GoalStatus.html#GoalStatus.serialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.GoalStatus.serialize" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">serialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/actionlib_msgs/msg/_GoalStatus.html#GoalStatus.serialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.GoalStatus.serialize" title="Link to this definition"></a></dt>
 <dd><p>serialize message into buffer
 :param buff: buffer, <code class="docutils literal notranslate"><span class="pre">StringIO</span></code></p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.GoalStatus.serialize_numpy">
-<span class="sig-name descname"><span class="pre">serialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/actionlib_msgs/msg/_GoalStatus.html#GoalStatus.serialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.GoalStatus.serialize_numpy" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">serialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/actionlib_msgs/msg/_GoalStatus.html#GoalStatus.serialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.GoalStatus.serialize_numpy" title="Link to this definition"></a></dt>
 <dd><p>serialize message with numpy array types into buffer
 :param buff: buffer, <code class="docutils literal notranslate"><span class="pre">StringIO</span></code>
 :param numpy: numpy python module</p>
@@ -526,40 +739,40 @@ It also subscribes to the robot info and to the goal to calculate the distance a
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.GoalStatus.status">
-<span class="sig-name descname"><span class="pre">status</span></span><a class="headerlink" href="#scripts.dis_speed_service.GoalStatus.status" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">status</span></span><a class="headerlink" href="#scripts.dis_speed_service.GoalStatus.status" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.GoalStatus.text">
-<span class="sig-name descname"><span class="pre">text</span></span><a class="headerlink" href="#scripts.dis_speed_service.GoalStatus.text" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">text</span></span><a class="headerlink" href="#scripts.dis_speed_service.GoalStatus.text" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.GoalStatus.to_string">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">to_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#scripts.dis_speed_service.GoalStatus.to_string" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">to_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#scripts.dis_speed_service.GoalStatus.to_string" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.Odometry">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.dis_speed_service.</span></span><span class="sig-name descname"><span class="pre">Odometry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nav_msgs/msg/_Odometry.html#Odometry"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.Odometry" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.dis_speed_service.</span></span><span class="sig-name descname"><span class="pre">Odometry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nav_msgs/msg/_Odometry.html#Odometry"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.Odometry" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.Odometry.child_frame_id">
-<span class="sig-name descname"><span class="pre">child_frame_id</span></span><a class="headerlink" href="#scripts.dis_speed_service.Odometry.child_frame_id" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">child_frame_id</span></span><a class="headerlink" href="#scripts.dis_speed_service.Odometry.child_frame_id" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.Odometry.deserialize">
-<span class="sig-name descname"><span class="pre">deserialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nav_msgs/msg/_Odometry.html#Odometry.deserialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.Odometry.deserialize" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">deserialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nav_msgs/msg/_Odometry.html#Odometry.deserialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.Odometry.deserialize" title="Link to this definition"></a></dt>
 <dd><p>unpack serialized message in str into this message instance
 :param str: byte array of serialized message, <code class="docutils literal notranslate"><span class="pre">str</span></code></p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.Odometry.deserialize_numpy">
-<span class="sig-name descname"><span class="pre">deserialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nav_msgs/msg/_Odometry.html#Odometry.deserialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.Odometry.deserialize_numpy" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">deserialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nav_msgs/msg/_Odometry.html#Odometry.deserialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.Odometry.deserialize_numpy" title="Link to this definition"></a></dt>
 <dd><p>unpack serialized message in str into this message instance using numpy for array types
 :param str: byte array of serialized message, <code class="docutils literal notranslate"><span class="pre">str</span></code>
 :param numpy: numpy python module</p>
@@ -567,24 +780,24 @@ It also subscribes to the robot info and to the goal to calculate the distance a
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.Odometry.header">
-<span class="sig-name descname"><span class="pre">header</span></span><a class="headerlink" href="#scripts.dis_speed_service.Odometry.header" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">header</span></span><a class="headerlink" href="#scripts.dis_speed_service.Odometry.header" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.Odometry.pose">
-<span class="sig-name descname"><span class="pre">pose</span></span><a class="headerlink" href="#scripts.dis_speed_service.Odometry.pose" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">pose</span></span><a class="headerlink" href="#scripts.dis_speed_service.Odometry.pose" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.Odometry.serialize">
-<span class="sig-name descname"><span class="pre">serialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nav_msgs/msg/_Odometry.html#Odometry.serialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.Odometry.serialize" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">serialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nav_msgs/msg/_Odometry.html#Odometry.serialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.Odometry.serialize" title="Link to this definition"></a></dt>
 <dd><p>serialize message into buffer
 :param buff: buffer, <code class="docutils literal notranslate"><span class="pre">StringIO</span></code></p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.Odometry.serialize_numpy">
-<span class="sig-name descname"><span class="pre">serialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nav_msgs/msg/_Odometry.html#Odometry.serialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.Odometry.serialize_numpy" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">serialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nav_msgs/msg/_Odometry.html#Odometry.serialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.Odometry.serialize_numpy" title="Link to this definition"></a></dt>
 <dd><p>serialize message with numpy array types into buffer
 :param buff: buffer, <code class="docutils literal notranslate"><span class="pre">StringIO</span></code>
 :param numpy: numpy python module</p>
@@ -592,25 +805,25 @@ It also subscribes to the robot info and to the goal to calculate the distance a
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.Odometry.twist">
-<span class="sig-name descname"><span class="pre">twist</span></span><a class="headerlink" href="#scripts.dis_speed_service.Odometry.twist" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">twist</span></span><a class="headerlink" href="#scripts.dis_speed_service.Odometry.twist" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.PlanningActionGoal">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.dis_speed_service.</span></span><span class="sig-name descname"><span class="pre">PlanningActionGoal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_PlanningActionGoal.html#PlanningActionGoal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.PlanningActionGoal" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.dis_speed_service.</span></span><span class="sig-name descname"><span class="pre">PlanningActionGoal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_PlanningActionGoal.html#PlanningActionGoal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.PlanningActionGoal" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.PlanningActionGoal.deserialize">
-<span class="sig-name descname"><span class="pre">deserialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_PlanningActionGoal.html#PlanningActionGoal.deserialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.PlanningActionGoal.deserialize" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">deserialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_PlanningActionGoal.html#PlanningActionGoal.deserialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.PlanningActionGoal.deserialize" title="Link to this definition"></a></dt>
 <dd><p>unpack serialized message in str into this message instance
 :param str: byte array of serialized message, <code class="docutils literal notranslate"><span class="pre">str</span></code></p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.PlanningActionGoal.deserialize_numpy">
-<span class="sig-name descname"><span class="pre">deserialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_PlanningActionGoal.html#PlanningActionGoal.deserialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.PlanningActionGoal.deserialize_numpy" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">deserialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_PlanningActionGoal.html#PlanningActionGoal.deserialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.PlanningActionGoal.deserialize_numpy" title="Link to this definition"></a></dt>
 <dd><p>unpack serialized message in str into this message instance using numpy for array types
 :param str: byte array of serialized message, <code class="docutils literal notranslate"><span class="pre">str</span></code>
 :param numpy: numpy python module</p>
@@ -618,29 +831,29 @@ It also subscribes to the robot info and to the goal to calculate the distance a
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.PlanningActionGoal.goal">
-<span class="sig-name descname"><span class="pre">goal</span></span><a class="headerlink" href="#scripts.dis_speed_service.PlanningActionGoal.goal" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">goal</span></span><a class="headerlink" href="#scripts.dis_speed_service.PlanningActionGoal.goal" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.PlanningActionGoal.goal_id">
-<span class="sig-name descname"><span class="pre">goal_id</span></span><a class="headerlink" href="#scripts.dis_speed_service.PlanningActionGoal.goal_id" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">goal_id</span></span><a class="headerlink" href="#scripts.dis_speed_service.PlanningActionGoal.goal_id" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.PlanningActionGoal.header">
-<span class="sig-name descname"><span class="pre">header</span></span><a class="headerlink" href="#scripts.dis_speed_service.PlanningActionGoal.header" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">header</span></span><a class="headerlink" href="#scripts.dis_speed_service.PlanningActionGoal.header" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.PlanningActionGoal.serialize">
-<span class="sig-name descname"><span class="pre">serialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_PlanningActionGoal.html#PlanningActionGoal.serialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.PlanningActionGoal.serialize" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">serialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_PlanningActionGoal.html#PlanningActionGoal.serialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.PlanningActionGoal.serialize" title="Link to this definition"></a></dt>
 <dd><p>serialize message into buffer
 :param buff: buffer, <code class="docutils literal notranslate"><span class="pre">StringIO</span></code></p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.PlanningActionGoal.serialize_numpy">
-<span class="sig-name descname"><span class="pre">serialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_PlanningActionGoal.html#PlanningActionGoal.serialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.PlanningActionGoal.serialize_numpy" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">serialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_PlanningActionGoal.html#PlanningActionGoal.serialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.PlanningActionGoal.serialize_numpy" title="Link to this definition"></a></dt>
 <dd><p>serialize message with numpy array types into buffer
 :param buff: buffer, <code class="docutils literal notranslate"><span class="pre">StringIO</span></code>
 :param numpy: numpy python module</p>
@@ -650,18 +863,18 @@ It also subscribes to the robot info and to the goal to calculate the distance a
 
 <dl class="py class">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.Robotinfo">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.dis_speed_service.</span></span><span class="sig-name descname"><span class="pre">Robotinfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_Robotinfo.html#Robotinfo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.Robotinfo" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.dis_speed_service.</span></span><span class="sig-name descname"><span class="pre">Robotinfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_Robotinfo.html#Robotinfo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.Robotinfo" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.Robotinfo.deserialize">
-<span class="sig-name descname"><span class="pre">deserialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_Robotinfo.html#Robotinfo.deserialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.Robotinfo.deserialize" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">deserialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_Robotinfo.html#Robotinfo.deserialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.Robotinfo.deserialize" title="Link to this definition"></a></dt>
 <dd><p>unpack serialized message in str into this message instance
 :param str: byte array of serialized message, <code class="docutils literal notranslate"><span class="pre">str</span></code></p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.Robotinfo.deserialize_numpy">
-<span class="sig-name descname"><span class="pre">deserialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_Robotinfo.html#Robotinfo.deserialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.Robotinfo.deserialize_numpy" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">deserialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_Robotinfo.html#Robotinfo.deserialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.Robotinfo.deserialize_numpy" title="Link to this definition"></a></dt>
 <dd><p>unpack serialized message in str into this message instance using numpy for array types
 :param str: byte array of serialized message, <code class="docutils literal notranslate"><span class="pre">str</span></code>
 :param numpy: numpy python module</p>
@@ -669,24 +882,24 @@ It also subscribes to the robot info and to the goal to calculate the distance a
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.Robotinfo.pos_x">
-<span class="sig-name descname"><span class="pre">pos_x</span></span><a class="headerlink" href="#scripts.dis_speed_service.Robotinfo.pos_x" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">pos_x</span></span><a class="headerlink" href="#scripts.dis_speed_service.Robotinfo.pos_x" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.Robotinfo.pos_y">
-<span class="sig-name descname"><span class="pre">pos_y</span></span><a class="headerlink" href="#scripts.dis_speed_service.Robotinfo.pos_y" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">pos_y</span></span><a class="headerlink" href="#scripts.dis_speed_service.Robotinfo.pos_y" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.Robotinfo.serialize">
-<span class="sig-name descname"><span class="pre">serialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_Robotinfo.html#Robotinfo.serialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.Robotinfo.serialize" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">serialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_Robotinfo.html#Robotinfo.serialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.Robotinfo.serialize" title="Link to this definition"></a></dt>
 <dd><p>serialize message into buffer
 :param buff: buffer, <code class="docutils literal notranslate"><span class="pre">StringIO</span></code></p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.Robotinfo.serialize_numpy">
-<span class="sig-name descname"><span class="pre">serialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_Robotinfo.html#Robotinfo.serialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.Robotinfo.serialize_numpy" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">serialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_Robotinfo.html#Robotinfo.serialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.Robotinfo.serialize_numpy" title="Link to this definition"></a></dt>
 <dd><p>serialize message with numpy array types into buffer
 :param buff: buffer, <code class="docutils literal notranslate"><span class="pre">StringIO</span></code>
 :param numpy: numpy python module</p>
@@ -694,46 +907,46 @@ It also subscribes to the robot info and to the goal to calculate the distance a
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.Robotinfo.vel_ang_z">
-<span class="sig-name descname"><span class="pre">vel_ang_z</span></span><a class="headerlink" href="#scripts.dis_speed_service.Robotinfo.vel_ang_z" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">vel_ang_z</span></span><a class="headerlink" href="#scripts.dis_speed_service.Robotinfo.vel_ang_z" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.Robotinfo.vel_x">
-<span class="sig-name descname"><span class="pre">vel_x</span></span><a class="headerlink" href="#scripts.dis_speed_service.Robotinfo.vel_x" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">vel_x</span></span><a class="headerlink" href="#scripts.dis_speed_service.Robotinfo.vel_x" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.SpeedDistance">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.dis_speed_service.</span></span><span class="sig-name descname"><span class="pre">SpeedDistance</span></span><a class="reference internal" href="_modules/assignment_2_2023/srv/_SpeedDistance.html#SpeedDistance"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.SpeedDistance" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.dis_speed_service.</span></span><span class="sig-name descname"><span class="pre">SpeedDistance</span></span><a class="reference internal" href="_modules/assignment_2_2023/srv/_SpeedDistance.html#SpeedDistance"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.SpeedDistance" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.SpeedDistanceResponse">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.dis_speed_service.</span></span><span class="sig-name descname"><span class="pre">SpeedDistanceResponse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/srv/_SpeedDistance.html#SpeedDistanceResponse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.SpeedDistanceResponse" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.dis_speed_service.</span></span><span class="sig-name descname"><span class="pre">SpeedDistanceResponse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/srv/_SpeedDistance.html#SpeedDistanceResponse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.SpeedDistanceResponse" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.SpeedDistanceResponse.avg_speed_x">
-<span class="sig-name descname"><span class="pre">avg_speed_x</span></span><a class="headerlink" href="#scripts.dis_speed_service.SpeedDistanceResponse.avg_speed_x" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">avg_speed_x</span></span><a class="headerlink" href="#scripts.dis_speed_service.SpeedDistanceResponse.avg_speed_x" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.SpeedDistanceResponse.avgspeed_ang_z">
-<span class="sig-name descname"><span class="pre">avgspeed_ang_z</span></span><a class="headerlink" href="#scripts.dis_speed_service.SpeedDistanceResponse.avgspeed_ang_z" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">avgspeed_ang_z</span></span><a class="headerlink" href="#scripts.dis_speed_service.SpeedDistanceResponse.avgspeed_ang_z" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.SpeedDistanceResponse.deserialize">
-<span class="sig-name descname"><span class="pre">deserialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/srv/_SpeedDistance.html#SpeedDistanceResponse.deserialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.SpeedDistanceResponse.deserialize" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">deserialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/srv/_SpeedDistance.html#SpeedDistanceResponse.deserialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.SpeedDistanceResponse.deserialize" title="Link to this definition"></a></dt>
 <dd><p>unpack serialized message in str into this message instance
 :param str: byte array of serialized message, <code class="docutils literal notranslate"><span class="pre">str</span></code></p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.SpeedDistanceResponse.deserialize_numpy">
-<span class="sig-name descname"><span class="pre">deserialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/srv/_SpeedDistance.html#SpeedDistanceResponse.deserialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.SpeedDistanceResponse.deserialize_numpy" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">deserialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/srv/_SpeedDistance.html#SpeedDistanceResponse.deserialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.SpeedDistanceResponse.deserialize_numpy" title="Link to this definition"></a></dt>
 <dd><p>unpack serialized message in str into this message instance using numpy for array types
 :param str: byte array of serialized message, <code class="docutils literal notranslate"><span class="pre">str</span></code>
 :param numpy: numpy python module</p>
@@ -741,19 +954,19 @@ It also subscribes to the robot info and to the goal to calculate the distance a
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.SpeedDistanceResponse.distance_target">
-<span class="sig-name descname"><span class="pre">distance_target</span></span><a class="headerlink" href="#scripts.dis_speed_service.SpeedDistanceResponse.distance_target" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">distance_target</span></span><a class="headerlink" href="#scripts.dis_speed_service.SpeedDistanceResponse.distance_target" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.SpeedDistanceResponse.serialize">
-<span class="sig-name descname"><span class="pre">serialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/srv/_SpeedDistance.html#SpeedDistanceResponse.serialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.SpeedDistanceResponse.serialize" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">serialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/srv/_SpeedDistance.html#SpeedDistanceResponse.serialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.SpeedDistanceResponse.serialize" title="Link to this definition"></a></dt>
 <dd><p>serialize message into buffer
 :param buff: buffer, <code class="docutils literal notranslate"><span class="pre">StringIO</span></code></p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.SpeedDistanceResponse.serialize_numpy">
-<span class="sig-name descname"><span class="pre">serialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/srv/_SpeedDistance.html#SpeedDistanceResponse.serialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.SpeedDistanceResponse.serialize_numpy" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">serialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/srv/_SpeedDistance.html#SpeedDistanceResponse.serialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.SpeedDistanceResponse.serialize_numpy" title="Link to this definition"></a></dt>
 <dd><p>serialize message with numpy array types into buffer
 :param buff: buffer, <code class="docutils literal notranslate"><span class="pre">StringIO</span></code>
 :param numpy: numpy python module</p>
@@ -763,14 +976,14 @@ It also subscribes to the robot info and to the goal to calculate the distance a
 
 <dl class="py function">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.dis_speed_service">
-<span class="sig-prename descclassname"><span class="pre">scripts.dis_speed_service.</span></span><span class="sig-name descname"><span class="pre">dis_speed_service</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/dis_speed_service.html#dis_speed_service"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.dis_speed_service" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">scripts.dis_speed_service.</span></span><span class="sig-name descname"><span class="pre">dis_speed_service</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/dis_speed_service.html#dis_speed_service"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.dis_speed_service" title="Link to this definition"></a></dt>
 <dd><p>Main function for the service server of the distance and speed
 It defines the service server for the speed and the distance and the subscribers to the robot info and to the goal</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.dis_speed_service_callback">
-<span class="sig-prename descclassname"><span class="pre">scripts.dis_speed_service.</span></span><span class="sig-name descname"><span class="pre">dis_speed_service_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/dis_speed_service.html#dis_speed_service_callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.dis_speed_service_callback" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">scripts.dis_speed_service.</span></span><span class="sig-name descname"><span class="pre">dis_speed_service_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/dis_speed_service.html#dis_speed_service_callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.dis_speed_service_callback" title="Link to this definition"></a></dt>
 <dd><p>Callback function for the service server of the distance and speed</p>
 <p>Args:
 request (SpeedDistance): request from the service server of the distance and speed</p>
@@ -780,7 +993,7 @@ SpeedDistanceResponse: response from the service server of the distance and spee
 
 <dl class="py function">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.info_callback">
-<span class="sig-prename descclassname"><span class="pre">scripts.dis_speed_service.</span></span><span class="sig-name descname"><span class="pre">info_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/dis_speed_service.html#info_callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.info_callback" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">scripts.dis_speed_service.</span></span><span class="sig-name descname"><span class="pre">info_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/dis_speed_service.html#info_callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.info_callback" title="Link to this definition"></a></dt>
 <dd><p>Callback function for the subscriber of the robot info</p>
 <p>Args:
 msg (Robotinfo): message from the subscriber for the robot info</p>
@@ -788,7 +1001,7 @@ msg (Robotinfo): message from the subscriber for the robot info</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.list_update">
-<span class="sig-prename descclassname"><span class="pre">scripts.dis_speed_service.</span></span><span class="sig-name descname"><span class="pre">list_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">listv</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/dis_speed_service.html#list_update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.list_update" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">scripts.dis_speed_service.</span></span><span class="sig-name descname"><span class="pre">list_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">listv</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/dis_speed_service.html#list_update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.list_update" title="Link to this definition"></a></dt>
 <dd><p>Function to update the list of the velocities</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -799,7 +1012,7 @@ msg (Robotinfo): message from the subscriber for the robot info</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="scripts.dis_speed_service.target_sub_callback">
-<span class="sig-prename descclassname"><span class="pre">scripts.dis_speed_service.</span></span><span class="sig-name descname"><span class="pre">target_sub_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/dis_speed_service.html#target_sub_callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.target_sub_callback" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">scripts.dis_speed_service.</span></span><span class="sig-name descname"><span class="pre">target_sub_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/dis_speed_service.html#target_sub_callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.dis_speed_service.target_sub_callback" title="Link to this definition"></a></dt>
 <dd><p>Callback function for the subscriber of the goal</p>
 <p>Args:
 msg (PlanningActionGoal): message from the subscriber</p>
@@ -807,7 +1020,7 @@ msg (PlanningActionGoal): message from the subscriber</p>
 
 </section>
 <section id="last-tar-service-module">
-<h1>last_tar_service Module<a class="headerlink" href="#last-tar-service-module" title="Link to this heading">¶</a></h1>
+<h1>last_tar_service Module<a class="headerlink" href="#last-tar-service-module" title="Link to this heading"></a></h1>
 <p id="module-last_tar_service"><span id="module-scripts.last_tar_service"></span>This module is the service server for the assignment 2 of the course 2023.
 It is used to return the last target of the robot.
 It also subscribes to the goal to know the last target.</p>
@@ -819,24 +1032,24 @@ It also subscribes to the goal to know the last target.</p>
 </dl>
 <dl class="py class">
 <dt class="sig sig-object py" id="scripts.last_tar_service.LastTarget">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.last_tar_service.</span></span><span class="sig-name descname"><span class="pre">LastTarget</span></span><a class="reference internal" href="_modules/assignment_2_2023/srv/_LastTarget.html#LastTarget"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.last_tar_service.LastTarget" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.last_tar_service.</span></span><span class="sig-name descname"><span class="pre">LastTarget</span></span><a class="reference internal" href="_modules/assignment_2_2023/srv/_LastTarget.html#LastTarget"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.last_tar_service.LastTarget" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="scripts.last_tar_service.LastTargetResponse">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.last_tar_service.</span></span><span class="sig-name descname"><span class="pre">LastTargetResponse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/srv/_LastTarget.html#LastTargetResponse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.last_tar_service.LastTargetResponse" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.last_tar_service.</span></span><span class="sig-name descname"><span class="pre">LastTargetResponse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/srv/_LastTarget.html#LastTargetResponse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.last_tar_service.LastTargetResponse" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.last_tar_service.LastTargetResponse.deserialize">
-<span class="sig-name descname"><span class="pre">deserialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/srv/_LastTarget.html#LastTargetResponse.deserialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.last_tar_service.LastTargetResponse.deserialize" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">deserialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/srv/_LastTarget.html#LastTargetResponse.deserialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.last_tar_service.LastTargetResponse.deserialize" title="Link to this definition"></a></dt>
 <dd><p>unpack serialized message in str into this message instance
 :param str: byte array of serialized message, <code class="docutils literal notranslate"><span class="pre">str</span></code></p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.last_tar_service.LastTargetResponse.deserialize_numpy">
-<span class="sig-name descname"><span class="pre">deserialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/srv/_LastTarget.html#LastTargetResponse.deserialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.last_tar_service.LastTargetResponse.deserialize_numpy" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">deserialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/srv/_LastTarget.html#LastTargetResponse.deserialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.last_tar_service.LastTargetResponse.deserialize_numpy" title="Link to this definition"></a></dt>
 <dd><p>unpack serialized message in str into this message instance using numpy for array types
 :param str: byte array of serialized message, <code class="docutils literal notranslate"><span class="pre">str</span></code>
 :param numpy: numpy python module</p>
@@ -844,14 +1057,14 @@ It also subscribes to the goal to know the last target.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.last_tar_service.LastTargetResponse.serialize">
-<span class="sig-name descname"><span class="pre">serialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/srv/_LastTarget.html#LastTargetResponse.serialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.last_tar_service.LastTargetResponse.serialize" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">serialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/srv/_LastTarget.html#LastTargetResponse.serialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.last_tar_service.LastTargetResponse.serialize" title="Link to this definition"></a></dt>
 <dd><p>serialize message into buffer
 :param buff: buffer, <code class="docutils literal notranslate"><span class="pre">StringIO</span></code></p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.last_tar_service.LastTargetResponse.serialize_numpy">
-<span class="sig-name descname"><span class="pre">serialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/srv/_LastTarget.html#LastTargetResponse.serialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.last_tar_service.LastTargetResponse.serialize_numpy" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">serialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/srv/_LastTarget.html#LastTargetResponse.serialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.last_tar_service.LastTargetResponse.serialize_numpy" title="Link to this definition"></a></dt>
 <dd><p>serialize message with numpy array types into buffer
 :param buff: buffer, <code class="docutils literal notranslate"><span class="pre">StringIO</span></code>
 :param numpy: numpy python module</p>
@@ -859,30 +1072,30 @@ It also subscribes to the goal to know the last target.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.last_tar_service.LastTargetResponse.tar_pose_x">
-<span class="sig-name descname"><span class="pre">tar_pose_x</span></span><a class="headerlink" href="#scripts.last_tar_service.LastTargetResponse.tar_pose_x" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">tar_pose_x</span></span><a class="headerlink" href="#scripts.last_tar_service.LastTargetResponse.tar_pose_x" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.last_tar_service.LastTargetResponse.tar_pose_y">
-<span class="sig-name descname"><span class="pre">tar_pose_y</span></span><a class="headerlink" href="#scripts.last_tar_service.LastTargetResponse.tar_pose_y" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">tar_pose_y</span></span><a class="headerlink" href="#scripts.last_tar_service.LastTargetResponse.tar_pose_y" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="scripts.last_tar_service.PlanningActionGoal">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.last_tar_service.</span></span><span class="sig-name descname"><span class="pre">PlanningActionGoal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_PlanningActionGoal.html#PlanningActionGoal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.last_tar_service.PlanningActionGoal" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.last_tar_service.</span></span><span class="sig-name descname"><span class="pre">PlanningActionGoal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_PlanningActionGoal.html#PlanningActionGoal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.last_tar_service.PlanningActionGoal" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.last_tar_service.PlanningActionGoal.deserialize">
-<span class="sig-name descname"><span class="pre">deserialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_PlanningActionGoal.html#PlanningActionGoal.deserialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.last_tar_service.PlanningActionGoal.deserialize" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">deserialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_PlanningActionGoal.html#PlanningActionGoal.deserialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.last_tar_service.PlanningActionGoal.deserialize" title="Link to this definition"></a></dt>
 <dd><p>unpack serialized message in str into this message instance
 :param str: byte array of serialized message, <code class="docutils literal notranslate"><span class="pre">str</span></code></p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.last_tar_service.PlanningActionGoal.deserialize_numpy">
-<span class="sig-name descname"><span class="pre">deserialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_PlanningActionGoal.html#PlanningActionGoal.deserialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.last_tar_service.PlanningActionGoal.deserialize_numpy" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">deserialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_PlanningActionGoal.html#PlanningActionGoal.deserialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.last_tar_service.PlanningActionGoal.deserialize_numpy" title="Link to this definition"></a></dt>
 <dd><p>unpack serialized message in str into this message instance using numpy for array types
 :param str: byte array of serialized message, <code class="docutils literal notranslate"><span class="pre">str</span></code>
 :param numpy: numpy python module</p>
@@ -890,29 +1103,29 @@ It also subscribes to the goal to know the last target.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.last_tar_service.PlanningActionGoal.goal">
-<span class="sig-name descname"><span class="pre">goal</span></span><a class="headerlink" href="#scripts.last_tar_service.PlanningActionGoal.goal" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">goal</span></span><a class="headerlink" href="#scripts.last_tar_service.PlanningActionGoal.goal" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.last_tar_service.PlanningActionGoal.goal_id">
-<span class="sig-name descname"><span class="pre">goal_id</span></span><a class="headerlink" href="#scripts.last_tar_service.PlanningActionGoal.goal_id" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">goal_id</span></span><a class="headerlink" href="#scripts.last_tar_service.PlanningActionGoal.goal_id" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scripts.last_tar_service.PlanningActionGoal.header">
-<span class="sig-name descname"><span class="pre">header</span></span><a class="headerlink" href="#scripts.last_tar_service.PlanningActionGoal.header" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">header</span></span><a class="headerlink" href="#scripts.last_tar_service.PlanningActionGoal.header" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.last_tar_service.PlanningActionGoal.serialize">
-<span class="sig-name descname"><span class="pre">serialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_PlanningActionGoal.html#PlanningActionGoal.serialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.last_tar_service.PlanningActionGoal.serialize" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">serialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_PlanningActionGoal.html#PlanningActionGoal.serialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.last_tar_service.PlanningActionGoal.serialize" title="Link to this definition"></a></dt>
 <dd><p>serialize message into buffer
 :param buff: buffer, <code class="docutils literal notranslate"><span class="pre">StringIO</span></code></p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="scripts.last_tar_service.PlanningActionGoal.serialize_numpy">
-<span class="sig-name descname"><span class="pre">serialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_PlanningActionGoal.html#PlanningActionGoal.serialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.last_tar_service.PlanningActionGoal.serialize_numpy" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">serialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/assignment_2_2023/msg/_PlanningActionGoal.html#PlanningActionGoal.serialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.last_tar_service.PlanningActionGoal.serialize_numpy" title="Link to this definition"></a></dt>
 <dd><p>serialize message with numpy array types into buffer
 :param buff: buffer, <code class="docutils literal notranslate"><span class="pre">StringIO</span></code>
 :param numpy: numpy python module</p>
@@ -922,14 +1135,14 @@ It also subscribes to the goal to know the last target.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="scripts.last_tar_service.last_tar_service">
-<span class="sig-prename descclassname"><span class="pre">scripts.last_tar_service.</span></span><span class="sig-name descname"><span class="pre">last_tar_service</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/last_tar_service.html#last_tar_service"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.last_tar_service.last_tar_service" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">scripts.last_tar_service.</span></span><span class="sig-name descname"><span class="pre">last_tar_service</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/last_tar_service.html#last_tar_service"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.last_tar_service.last_tar_service" title="Link to this definition"></a></dt>
 <dd><p>Main function for the service server of the last target
 It defines the service server for the last target and the subscriber to the goal</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="scripts.last_tar_service.target_service_callback">
-<span class="sig-prename descclassname"><span class="pre">scripts.last_tar_service.</span></span><span class="sig-name descname"><span class="pre">target_service_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/last_tar_service.html#target_service_callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.last_tar_service.target_service_callback" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">scripts.last_tar_service.</span></span><span class="sig-name descname"><span class="pre">target_service_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/last_tar_service.html#target_service_callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.last_tar_service.target_service_callback" title="Link to this definition"></a></dt>
 <dd><p>Callback function for the service server of the last target</p>
 <p>Args:
 request(LastTargetRequest): request from the client</p>
@@ -939,7 +1152,7 @@ LastTargetResponse: response to the client</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="scripts.last_tar_service.target_sub_callback">
-<span class="sig-prename descclassname"><span class="pre">scripts.last_tar_service.</span></span><span class="sig-name descname"><span class="pre">target_sub_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/last_tar_service.html#target_sub_callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.last_tar_service.target_sub_callback" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">scripts.last_tar_service.</span></span><span class="sig-name descname"><span class="pre">target_sub_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/last_tar_service.html#target_sub_callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.last_tar_service.target_sub_callback" title="Link to this definition"></a></dt>
 <dd><p>Callback function for the subscriber of the goal</p>
 <p>Args:
 msg(PlanningActionGoal): message from the topic</p>
@@ -948,66 +1161,31 @@ msg(PlanningActionGoal): message from the topic</p>
 </section>
 
 
+           </div>
           </div>
-          
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Fabio Guelfi.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="#">ros_rt1</a></h1>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
 
-
-
-
-
-
-
-
-<h3>Navigation</h3>
-
-<div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="#">Documentation overview</a><ul>
-  </ul></li>
-</ul>
-</div>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>document.getElementById('searchbox').style.display = "block"</script>
-
-
-
-
-
-
-
-
-        </div>
-      </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="footer">
-      &copy;2024, Fabio Guelfi.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.2.6</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
-      
-      |
-      <a href="_sources/index.rst.txt"
-          rel="nofollow">Page source</a>
-    </div>
-
-    
-
-    
-  </body>
+</body>
 </html>
