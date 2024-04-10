@@ -59,6 +59,8 @@ actionlib
    FILES
    Robotinfo.msg
    Robotinfofeet.msg
+   GoalCoord.msg
+#   GoalCancel.msg
 #   Message2.msg
  )
 
