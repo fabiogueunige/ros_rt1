@@ -106,14 +106,13 @@ def goal_canceling_service(req):
     rospy.wait_for_service('/cancel_goal')
 
     response = CancelGoalResponse()
-
-    
     try: 
-        clienttar.cancel_goal() 
-        response.stat = "Done"
+        if (clienttar.get_state() == GoalStatus.ACTIVE):
+            clienttar.cancel_goal() 
+            response.stat = "Done"
     except:
         if (clienttar.get_state() != GoalStatus.ACTIVE):
-            response.stat = "Goal already reached"
+            response.stat = "Reached"
         else:
             response.stat = "Error"
     
@@ -140,7 +139,7 @@ def main():
     """
 
     # Service to cancel the goal
-    servCancGoal = rospy.ServiceProxy('/cancel_goal', CancelGoal) #  goal_canceling_service va aggiunto?
+    servCancGoal = rospy.Service('/cancel_goal', CancelGoal, goal_canceling_service) #  goal_canceling_service va aggiunto?
     """ Service to cancel the goal
     """
 
@@ -178,3 +177,4 @@ if __name__ == '__main__':
         print("Errors in action_client.py")
         print("program interrupted before completion for errors", file=sys.stderr)
         pass
+
