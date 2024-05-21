@@ -78,7 +78,7 @@ So here a fast introduction of the nodes already implemented:
  **wall_follow_service:** Makes the robot follow a wall to drive around it. In the meanwhile it processes datas to detect obstacles and avoid them with an 180 degrees view (front, left and right).
 
 ### Assignment implementation
-[Here the documentation page](https://fabiogueunige.github.io/ros_rt1/)
+[Here the documentation page](https://fabiogueunige.github.io/ros_rt1/)  
 The assignment requires the implementation of the desired position acquisition user side.
 The nodes implemented are:
 * **action_client.py** to send to bug_as.py the goal position chose by the user and to publish all the information about the actual position of the robot and its velocity. The message is the RobotInfo.msg inside the msg folder.
