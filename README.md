@@ -82,7 +82,8 @@ The assignment requires the implementation of the desired position acquisition u
 The nodes implemented are:
 * **action_client.py** to send to bug_as.py the goal position chose by the user and to publish all the information about the actual position of the robot and its velocity. The message is the RobotInfo.msg inside the msg folder.
 *  **last_tar_service.py** to create a service that can be call by the user with the position of the target informations. The service is LastTarget.srv inside the srv folder
-*  **dis_speed_service** to retrieve the distance of the robot from the target and the avarage speed of the robot along the x axis and the angular speed in case of rotation.
+*  **dis_speed_service** to retrieve the distance of the robot from the target and the avarage speed of the robot along the x axis and the angular speed in case of rotation.  
+[Here the documentation page](https://fabiogueunige.github.io/ros_rt1/)
 
 ![Scheme show](https://github.com/fabiogueunige/ros_rt1/blob/readRes/rosgraph.png)
 

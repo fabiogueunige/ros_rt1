@@ -122,7 +122,8 @@ def goal_canceling_service(req):
 def main():
     """
         This function initializes the nodes and calls the action client function.
-        This also initializes the publisher and subscriber for the robot information, the service for the goal canceling and the action to reach the goal.
+        This also initializes the publisher and subscriber for the robot information, 
+        the service for the goal canceling and the action to reach the goal.
     """
     global pubInfo, subOdom, clienttar, pubInfoFeet, servCancGoal
     global goalpos
